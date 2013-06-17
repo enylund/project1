@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  channel_name: MyString
+  description: MyString
+
+two:
+  channel_name: MyString
+  description: MyString
