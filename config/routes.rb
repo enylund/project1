@@ -1,9 +1,9 @@
 BiblioApp::Application.routes.draw do
+  resources :channels
+
   resources :comments
 
   resources :posts
-
-  resources :channels
 
   resources :users
 

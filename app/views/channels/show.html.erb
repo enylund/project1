@@ -1,13 +1,18 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Channel name:</strong>
-  <%= @channel.channel_name %>
+  <strong>Name:</strong>
+  <%= @channel.name %>
 </p>
 
 <p>
   <strong>Description:</strong>
   <%= @channel.description %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @channel.user %>
 </p>
 
 <%= link_to 'Edit', edit_channel_path(@channel) %> |

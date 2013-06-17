@@ -1,0 +1,13 @@
+<div class="channel">
+  <div class="channel-name">CHANNEL NAME: <%= link_to channel.channel_name, channel %></div>
+  <div class="channel-author">MADE BY: 
+    <%= link_to channel.user, channel.user %></div>
+  <div class="channel-description">DESCRIPTION: <%= simple_format(channel.description) %></div>
+
+<!-- LOAD POSTS HERE -->
+  <div class="posts">
+    <%= render channel.posts %>
+  </div>
+
+
+</div>
