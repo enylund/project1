@@ -1,4 +1,9 @@
 BiblioApp::Application.routes.draw do
+  get "access/menu"
+  get "access/login"
+  post "access/attempt_login"
+  match "login" => 'access#login', :via => :get
+  
   resources :channels
 
   resources :comments
