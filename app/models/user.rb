@@ -1,5 +1,44 @@
+require 'digest/sha1'
 class User < ActiveRecord::Base
   has_many :channels
   has_many :posts
   has_many :comments
-end
+
+  attr_accessor :password
+
+  before_save :create_hashed_password
+  after_save :clear_password
+
+  def self.make_salt(username="")
+    Digest::SHA1.hexdigest("Use #{username} with #{Time.new} to make salt")
+  end
+
+  def self.hash_with_salt(password="", salt="")
+    Digest::SHA1.hexdigest("Pust #{salt} on the #{password}")
+  end
+
+  def self.authenticate(username="", password="")
+    user = User.find_by_username(username)
+    if user && user.password_match?(password)
+      return user
+    else
+      return false
+    end
+  end
+
+  def password_match?(password="")
+      hashed_password == User.hash_with_salt(password, salt)
+  end
+ private
+
+  def create_hashed_password
+    unless password.blank?
+     self.salt =  User.make_salt(username) if salt.blank?
+     self.hashed_password = User.hash_with_salt(password, salt)
+    end
+  end
+
+  def clear_password
+    password = nil
+  end
+end 
