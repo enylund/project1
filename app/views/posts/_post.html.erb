@@ -3,5 +3,20 @@
   <div class="post-caption">CAPTION: <%= post.caption %></div>
   <div class="post-channel">Channel ID: <%= post.channel.name %></div>
 
+<div>----------END OF POST-----------</div>
+
+  <div class="new-comment">
+    Add a new comment:
+    <%= form_for Comment.new do |f| %>
+      <p><%= f.text_area :content %></p>
+      <p><%= f.hidden_field :post_id, value: post.id %></p>
+      <p><%= f.submit %></p>
+    <% end %>
+  </div>
+  <div class="comments">
+    <%= render post.comments %>
+  </div>
+
+<div>-------------END OF POST FINAL----------</div>
 
 </div>

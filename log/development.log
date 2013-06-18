@@ -5056,3 +5056,3815 @@ Processing by ChannelsController#show as HTML
   Rendered channels/_channel.html.erb (103.2ms)
   Rendered channels/show.html.erb within layouts/application (175.8ms)
 Completed 200 OK in 686ms (Views: 674.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:24:59 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (3.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (16.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 1]]
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (4.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  Rendered posts/_post.html.erb (344.2ms)
+  Rendered channels/_channel.html.erb (626.2ms)
+  Rendered channels/show.html.erb within layouts/application (704.9ms)
+Completed 500 Internal Server Error in 1108ms
+
+ActionView::Template::Error (Missing partial comments/comment with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/vagrant/biblio_app/project1/app/views"
+):
+    14:     <% end %>
+    15:   </div>
+    16:   <div class="comments">
+    17:     <%= render post.comments %>
+    18:   </div>
+    19: 
+    20: <div>-------------END OF POST FINAL----------</div>
+  app/views/posts/_post.html.erb:17:in `_app_views_posts__post_html_erb___265814475__590771078'
+  app/views/channels/_channel.html.erb:8:in `_app_views_channels__channel_html_erb__342536594__600306308'
+  app/views/channels/show.html.erb:1:in `_app_views_channels_show_html_erb___948591169__601000628'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.7ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:26:46 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (5.4ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (3.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 1]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/_post.html.erb (119.1ms)
+  Rendered channels/_channel.html.erb (272.4ms)
+  Rendered channels/show.html.erb within layouts/application (326.2ms)
+Completed 200 OK in 1301ms (Views: 1212.8ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:26:48 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:26:48 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:26:48 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:26:48 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:26:48 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:26:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:26:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:26:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:26:49 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:26:49 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:26:49 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:26:49 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:26:50 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:26:50 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:27:25 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"a new comment", "post_id"=>"1"}, "commit"=>"Create Comment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (26.1ms)[0m  INSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "a new comment"], ["created_at", Tue, 18 Jun 2013 14:27:25 UTC +00:00], ["post_id", 1], ["updated_at", Tue, 18 Jun 2013 14:27:25 UTC +00:00]]
+  [1m[36m (8.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/comments/2
+Completed 302 Found in 47ms (ActiveRecord: 34.3ms)
+
+
+Started GET "/comments/2" for 10.0.2.2 at 2013-06-18 14:27:25 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mComment Load (3.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered comments/show.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 541ms (Views: 531.0ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:26 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:26 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:26 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:26 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:26 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:27 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:27 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:27 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:27 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:27 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:27 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:27 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:28 +0000
+
+
+Started GET "/comments" for 10.0.2.2 at 2013-06-18 14:27:29 +0000
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (3.3ms)[0m  SELECT "comments".* FROM "comments"
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered comments/index.html.erb within layouts/application (19.9ms)
+Completed 200 OK in 524ms (Views: 513.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/channels" for 10.0.2.2 at 2013-06-18 14:27:37 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels"[0m
+  Rendered channels/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 484ms (Views: 479.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:38 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:38 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:38 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:38 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:39 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:27:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:39 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:39 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:40 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:40 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:40 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:27:40 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:27:42 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (3.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (3.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_post.html.erb (14.9ms)
+  Rendered channels/_channel.html.erb (92.1ms)
+  Rendered channels/show.html.erb within layouts/application (160.2ms)
+Completed 200 OK in 670ms (Views: 657.5ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:27:50 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (3.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (3.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (4.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered posts/_post.html.erb (134.0ms)
+  Rendered channels/_channel.html.erb (189.3ms)
+  Rendered channels/show.html.erb within layouts/application (237.0ms)
+Completed 500 Internal Server Error in 378ms
+
+ActionView::Template::Error (Missing partial comments/comment with {:locale=>[:en], :formats=>[:html], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/vagrant/biblio_app/project1/app/views"
+):
+    14:     <% end %>
+    15:   </div>
+    16:   <div class="comments">
+    17:     <%= render post.comments %>
+    18:   </div>
+    19: 
+    20: <div>-------------END OF POST FINAL----------</div>
+  app/views/posts/_post.html.erb:17:in `_app_views_posts__post_html_erb___265814475__600289848'
+  app/views/channels/_channel.html.erb:8:in `_app_views_channels__channel_html_erb__342536594__600306308'
+  app/views/channels/show.html.erb:1:in `_app_views_channels_show_html_erb___948591169__601000628'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.9ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:29:16 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (3.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (3.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (2.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (3.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered comments/_comment.html.erb (59.7ms)
+  Rendered posts/_post.html.erb (138.1ms)
+  Rendered channels/_channel.html.erb (203.7ms)
+  Rendered channels/show.html.erb within layouts/application (265.6ms)
+Completed 500 Internal Server Error in 423ms
+
+ActionView::Template::Error (undefined method `channel_id' for #<Comment:0xb9d8d1dc>):
+    1: <div class="comment">
+    2:   <div class="comment-content"><%= comment.content %></div>
+    3:   <div class="comment-post">Comment to post: <%= comment.channel_id %>
+    4:   <div class="comment-author">Comment by: <%= comment.user %></div>
+    5: </div>
+  app/views/comments/_comment.html.erb:3:in `_app_views_comments__comment_html_erb__982708835__588488058'
+  app/views/posts/_post.html.erb:17:in `_app_views_posts__post_html_erb___265814475__600289848'
+  app/views/channels/_channel.html.erb:8:in `_app_views_channels__channel_html_erb__342536594__600306308'
+  app/views/channels/show.html.erb:1:in `_app_views_channels_show_html_erb___948591169__601000628'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.2ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:29:51 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (3.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (4.3ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (3.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered comments/_comment.html.erb (52.3ms)
+  Rendered posts/_post.html.erb (119.0ms)
+  Rendered channels/_channel.html.erb (177.3ms)
+  Rendered channels/show.html.erb within layouts/application (230.1ms)
+Completed 500 Internal Server Error in 376ms
+
+ActionView::Template::Error (undefined method `channel' for #<Comment:0xba02636c>):
+    1: <div class="comment">
+    2:   <div class="comment-content"><%= comment.content %></div>
+    3:   <div class="comment-post">Comment to post: <%= comment.channel %>
+    4:   <div class="comment-author">Comment by: <%= comment.user %></div>
+    5: </div>
+  app/views/comments/_comment.html.erb:3:in `_app_views_comments__comment_html_erb__982708835__587125738'
+  app/views/posts/_post.html.erb:17:in `_app_views_posts__post_html_erb___265814475__600289848'
+  app/views/channels/_channel.html.erb:8:in `_app_views_channels__channel_html_erb__342536594__600306308'
+  app/views/channels/show.html.erb:1:in `_app_views_channels_show_html_erb___948591169__601000628'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.4ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:29:58 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (2.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (2.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (3.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  Rendered comments/_comment.html.erb (0.8ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (2.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (77.8ms)
+  Rendered channels/_channel.html.erb (136.4ms)
+  Rendered channels/show.html.erb within layouts/application (183.9ms)
+Completed 200 OK in 699ms (Views: 680.6ms | ActiveRecord: 14.9ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:29:59 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:29:59 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:29:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:29:59 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:29:59 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:30:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:00 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:00 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:00 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:00 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:00 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:01 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:01 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:30:51 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (3.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (4.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (4.2ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (4.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered comments/_comment.html.erb (6.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (2.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (86.3ms)
+  Rendered channels/_channel.html.erb (151.5ms)
+  Rendered channels/show.html.erb within layouts/application (209.2ms)
+Completed 200 OK in 711ms (Views: 686.5ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:30:52 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:30:52 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:30:52 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:30:52 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:30:52 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:30:52 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:53 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:53 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:53 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:53 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:53 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:53 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:30:53 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:31:12 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"COMMENTING ON URL2", "post_id"=>"1"}, "commit"=>"Create Comment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.7ms)[0m  INSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "COMMENTING ON URL2"], ["created_at", Tue, 18 Jun 2013 14:31:12 UTC +00:00], ["post_id", 1], ["updated_at", Tue, 18 Jun 2013 14:31:12 UTC +00:00]]
+  [1m[36m (5.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/comments/3
+Completed 302 Found in 31ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/comments/3" for 10.0.2.2 at 2013-06-18 14:31:12 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered comments/show.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 461ms (Views: 452.4ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:13 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:13 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:13 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:13 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:13 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:14 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:14 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:14 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:14 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:14 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:14 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:14 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:15 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:15 +0000
+
+
+Started GET "/channels" for 10.0.2.2 at 2013-06-18 14:31:20 +0000
+Processing by ChannelsController#index as HTML
+  [1m[35mChannel Load (3.1ms)[0m  SELECT "channels".* FROM "channels"
+  Rendered channels/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 535ms (Views: 530.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:21 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:21 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:21 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:21 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:21 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:31:21 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:22 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:22 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:22 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:22 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:31:23 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:31:25 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (4.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 1]]
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered comments/_comment.html.erb (6.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (98.5ms)
+  Rendered channels/_channel.html.erb (185.1ms)
+  Rendered channels/show.html.erb within layouts/application (257.1ms)
+Completed 200 OK in 744ms (Views: 722.3ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/channels" for 10.0.2.2 at 2013-06-18 14:32:15 +0000
+Processing by ChannelsController#index as HTML
+  [1m[35mChannel Load (3.5ms)[0m  SELECT "channels".* FROM "channels"
+  Rendered channels/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 551ms (Views: 545.6ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:16 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:16 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:16 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:17 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:17 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:17 +0000
+
+
+Started GET "/comments" for 10.0.2.2 at 2013-06-18 14:32:17 +0000
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (2.5ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  [1m[35mPost Load (4.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (3.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered comments/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 544ms (Views: 528.2ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:18 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:18 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:18 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:18 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:18 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:19 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:19 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:19 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:19 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:19 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:19 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:32:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:20 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:20 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:20 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:20 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:20 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:20 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:20 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:21 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:21 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:32:21 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:34:17 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"A NEW COMMENT FOR URL.", "post_id"=>"1"}, "commit"=>"Create Comment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (36.2ms)[0m  INSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "A NEW COMMENT FOR URL."], ["created_at", Tue, 18 Jun 2013 14:34:18 UTC +00:00], ["post_id", 1], ["updated_at", Tue, 18 Jun 2013 14:34:18 UTC +00:00]]
+  [1m[36m (14.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/comments/4
+Completed 302 Found in 63ms (ActiveRecord: 50.7ms)
+
+
+Started GET "/comments/4" for 10.0.2.2 at 2013-06-18 14:34:18 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mComment Load (3.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mPost Load (3.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered comments/show.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 511ms (Views: 500.6ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:18 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:19 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:19 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:19 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:19 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:19 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:19 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:19 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:20 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:20 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:20 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:20 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:20 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:20 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:34:26 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (3.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (3.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (3.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered comments/_comment.html.erb (5.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (80.0ms)
+  Rendered channels/_channel.html.erb (145.6ms)
+  Rendered channels/show.html.erb within layouts/application (201.2ms)
+Completed 200 OK in 699ms (Views: 676.4ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:27 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:28 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:28 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:28 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:28 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:34:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:28 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:29 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:29 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:29 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:29 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:29 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:34:29 +0000
+
+
+Started GET "/comments" for 10.0.2.2 at 2013-06-18 14:35:47 +0000
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (4.1ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  [1m[35mPost Load (3.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered comments/index.html.erb within layouts/application (27.4ms)
+Completed 200 OK in 494ms (Views: 482.8ms | ActiveRecord: 10.5ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:35:48 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:35:48 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:35:48 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:35:48 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:35:48 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:35:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:35:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:35:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:35:49 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:35:49 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:35:49 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:35:49 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:35:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:35:50 +0000
+
+
+Started GET "/comments/new" for 10.0.2.2 at 2013-06-18 14:36:04 +0000
+Processing by CommentsController#new as HTML
+  Rendered comments/_form.html.erb (27.4ms)
+  Rendered comments/new.html.erb within layouts/application (103.5ms)
+Completed 200 OK in 602ms (Views: 601.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:36:20 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"TESTA", "post"=>"0xb84e2920", "user"=>"1"}, "commit"=>"Create Comment"}
+Unpermitted parameters: post, user
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (10.8ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["content", "TESTA"], ["created_at", Tue, 18 Jun 2013 14:36:20 UTC +00:00], ["updated_at", Tue, 18 Jun 2013 14:36:20 UTC +00:00]]
+  [1m[35m (5.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/comments/5
+Completed 302 Found in 32ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/comments/5" for 10.0.2.2 at 2013-06-18 14:36:20 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered comments/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 510ms (Views: 504.7ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:21 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:21 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:21 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:21 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:22 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:22 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:22 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:22 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:22 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:22 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:23 +0000
+
+
+Started GET "/comments/5/edit" for 10.0.2.2 at 2013-06-18 14:36:25 +0000
+Processing by CommentsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mComment Load (3.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered comments/_form.html.erb (4.0ms)
+  Rendered comments/edit.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 569ms (Views: 562.8ms | ActiveRecord: 3.3ms)
+
+
+Started PATCH "/comments/5" for 10.0.2.2 at 2013-06-18 14:36:30 +0000
+Processing by CommentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"TESTA", "post"=>"", "user"=>""}, "commit"=>"Update Comment", "id"=>"5"}
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", "5"]]
+Unpermitted parameters: post, user
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/comments/5
+Completed 302 Found in 16ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/comments/5" for 10.0.2.2 at 2013-06-18 14:36:30 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mComment Load (2.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered comments/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 535ms (Views: 529.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:31 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:31 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:31 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:31 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:32 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:32 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:32 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:32 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:33 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:33 +0000
+
+
+Started GET "/channels/" for 10.0.2.2 at 2013-06-18 14:36:40 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (2.8ms)[0m  [1mSELECT "channels".* FROM "channels"[0m
+  Rendered channels/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 507ms (Views: 502.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:41 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:41 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:42 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:42 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:42 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:36:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:42 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:42 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:42 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:43 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:43 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:43 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:36:43 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:36:44 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (2.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (3.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered comments/_comment.html.erb (5.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (101.3ms)
+  Rendered channels/_channel.html.erb (178.3ms)
+  Rendered channels/show.html.erb within layouts/application (246.7ms)
+Completed 200 OK in 824ms (Views: 803.1ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:36:52 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 1]]
+  [1m[36mChannel Load (2.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mPost Load (3.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered comments/_comment.html.erb (6.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (98.3ms)
+  Rendered channels/_channel.html.erb (178.2ms)
+  Rendered channels/show.html.erb within layouts/application (244.4ms)
+Completed 200 OK in 729ms (Views: 707.8ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:37:52 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (4.2ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+ERROR: compiling _app_views_channels__channel_html_erb__342536594__595230888 RAISED /vagrant/biblio_app/project1/app/views/channels/_channel.html.erb:5: syntax error, unexpected ')', expecting keyword_end
+...append=( channel.description) );@output_buffer.safe_append='...
+...                               ^
+Function body:           def _app_views_channels__channel_html_erb__342536594__595230888(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "channels/_channel";_old_output_buffer = @output_buffer;channel = channel = local_assigns[:channel];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<div class="channel">
+  <div class="channel-name">CHANNEL NAME: ';@output_buffer.append=( link_to channel.name, channel );@output_buffer.safe_append='</div>
+  <div class="channel-author">MADE BY: 
+    ';@output_buffer.append=( link_to channel.user, channel.user );@output_buffer.safe_append='</div>
+  <div class="channel-description">DESCRIPTION: ';@output_buffer.append=( channel.description) );@output_buffer.safe_append='</div>
+
+  <div class="posts">
+  	';@output_buffer.append=( render channel.posts );@output_buffer.safe_append='
+  </div>
+
+<!-- LOAD POSTS HERE -->
+  <div class="new-post">
+  	MAKE NEW POST:
+  	';@output_buffer.append=  form_for Post.new do |f| @output_buffer.safe_append='
+  	<p>';@output_buffer.append=( f.text_area :img_url );@output_buffer.safe_append='</p>
+  	<p>';@output_buffer.append=( f.text_area :caption );@output_buffer.safe_append='</p>
+  	<p>';@output_buffer.append=( f.hidden_field :user_id, value: 1 );@output_buffer.safe_append='</p>
+  	<p>';@output_buffer.append=( f.hidden_field :channel_id, value: 1 );@output_buffer.safe_append='</p>
+  	<p>';@output_buffer.append=( f.submit );@output_buffer.safe_append='</p>
+';  	 end 
+@output_buffer.safe_append='  </div>
+
+</div>
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:299:in `module_eval'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:299:in `compile'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:248:in `block in compile!'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:236:in `synchronize'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:236:in `compile!'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:142:in `block in render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:161:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:141:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/vagrant/biblio_app/project1/app/views/channels/show.html.erb:1:in `_app_views_channels_show_html_erb___948591169__601000628'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:143:in `block in render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:161:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:141:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/rendering.rb:97:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0.rc1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/base.rb:189:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/callbacks.rb:432:in `_run__426881099__process_action__callbacks'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0.rc1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/base.rb:136:in `process'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/rendering.rb:44:in `process'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal.rb:195:in `dispatch'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal.rb:231:in `block in action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/routing/route_set.rb:654:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0.rc1/lib/active_record/query_cache.rb:36:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0.rc1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0.rc1/lib/active_record/migration.rb:366:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/callbacks.rb:392:in `_run__784447540__call__callbacks'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/rack/logger.rb:38:in `call_app'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/rack/logger.rb:21:in `block in call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/rack/logger.rb:21:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/engine.rb:511:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/application.rb:96:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered channels/_channel.html.erb (9.5ms)
+  Rendered channels/show.html.erb within layouts/application (58.7ms)
+Completed 500 Internal Server Error in 207ms
+
+ActionView::Template::Error (/vagrant/biblio_app/project1/app/views/channels/_channel.html.erb:5: syntax error, unexpected ')', expecting keyword_end
+...append=( channel.description) );@output_buffer.safe_append='...
+...                               ^):
+    2:   <div class="channel-name">CHANNEL NAME: <%= link_to channel.name, channel %></div>
+    3:   <div class="channel-author">MADE BY: 
+    4:     <%= link_to channel.user, channel.user %></div>
+    5:   <div class="channel-description">DESCRIPTION: <%= channel.description) %></div>
+    6: 
+    7:   <div class="posts">
+    8:   	<%= render channel.posts %>
+  app/views/channels/show.html.erb:1:in `_app_views_channels_show_html_erb___948591169__601000628'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.4ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:38:56 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (4.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 1]]
+  [1m[36mChannel Load (3.3ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mPost Load (2.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered comments/_comment.html.erb (5.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (80.4ms)
+  Rendered channels/_channel.html.erb (145.6ms)
+  Rendered channels/show.html.erb within layouts/application (200.9ms)
+Completed 200 OK in 731ms (Views: 707.7ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:38:57 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:38:57 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:38:57 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:38:58 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:38:58 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:38:58 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:38:58 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:38:58 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:38:58 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:38:58 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:38:59 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:38:59 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:38:59 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:38:59 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:39:10 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (3.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (4.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (3.5ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (10.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mPost Load (3.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered comments/_comment.html.erb (8.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered collection (0.1ms)
+  Rendered posts/_post.html.erb (93.5ms)
+  Rendered channels/_channel.html.erb (182.8ms)
+  Rendered channels/show.html.erb within layouts/application (238.9ms)
+Completed 200 OK in 756ms (Views: 723.3ms | ActiveRecord: 29.3ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:11 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:11 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:11 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:11 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:11 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:12 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:12 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:12 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:12 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:12 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:12 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:12 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:13 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:39:21 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (3.2ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 1]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered comments/_comment.html.erb (4.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (2.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (78.6ms)
+  Rendered channels/_channel.html.erb (143.8ms)
+  Rendered channels/show.html.erb within layouts/application (195.1ms)
+Completed 200 OK in 703ms (Views: 680.8ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:22 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:22 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:22 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:22 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:22 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:23 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:23 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:23 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:23 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:23 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:23 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:23 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:24 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:39:31 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (4.5ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (4.3ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (2.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered comments/_comment.html.erb (5.2ms)
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (85.8ms)
+  Rendered channels/_channel.html.erb (151.2ms)
+  Rendered channels/show.html.erb within layouts/application (208.5ms)
+Completed 200 OK in 709ms (Views: 683.8ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:32 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:33 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:33 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:33 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:33 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:34 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:34 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:34 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:34 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:34 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:34 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:39:41 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (3.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (3.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 1]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered comments/_comment.html.erb (5.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (2.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (81.0ms)
+  Rendered channels/_channel.html.erb (142.0ms)
+  Rendered channels/show.html.erb within layouts/application (195.2ms)
+Completed 200 OK in 684ms (Views: 662.7ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:41 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:42 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:42 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:42 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:42 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:39:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:44 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:44 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:44 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:44 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:39:44 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:40:18 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (3.4ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+ERROR: compiling _app_views_channels__channel_html_erb__342536594__587699238 RAISED /vagrant/biblio_app/project1/app/views/channels/_channel.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...append=( f.text_area :img_url "img url" );@output_buffer.saf...
+...                               ^
+Function body:           def _app_views_channels__channel_html_erb__342536594__587699238(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "channels/_channel";_old_output_buffer = @output_buffer;channel = channel = local_assigns[:channel];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<div class="channel">
+  <div class="channel-name">CHANNEL NAME: ';@output_buffer.append=( link_to channel.name, channel );@output_buffer.safe_append='</div>
+  <div class="channel-author">MADE BY: 
+    ';@output_buffer.append=( link_to channel.user, channel.user );@output_buffer.safe_append='</div>
+  <div class="channel-description">DESCRIPTION: ';@output_buffer.append=( channel.description );@output_buffer.safe_append='</div>
+
+  <p />
+
+  <div class="posts">
+  	';@output_buffer.append=( render channel.posts );@output_buffer.safe_append='
+  </div>
+
+<!-- LOAD POSTS HERE -->
+  <div class="new-post">
+  	MAKE NEW POST:
+  	';@output_buffer.append=  form_for Post.new do |f| @output_buffer.safe_append='
+  	<p>';@output_buffer.append=( f.text_area :img_url "img url" );@output_buffer.safe_append='</p>
+  	<p>';@output_buffer.append=( f.text_area :caption );@output_buffer.safe_append='</p>
+  	<p>';@output_buffer.append=( f.hidden_field :user_id, value: 1 );@output_buffer.safe_append='</p>
+  	<p>';@output_buffer.append=( f.hidden_field :channel_id, value: 1 );@output_buffer.safe_append='</p>
+  	<p>';@output_buffer.append=( f.submit );@output_buffer.safe_append='</p>
+';  	 end 
+@output_buffer.safe_append='  </div>
+
+</div>
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:299:in `module_eval'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:299:in `compile'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:248:in `block in compile!'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:236:in `synchronize'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:236:in `compile!'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:142:in `block in render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:161:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:141:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/partial_renderer.rb:306:in `render_partial'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/partial_renderer.rb:279:in `block in render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/partial_renderer.rb:278:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/renderer.rb:47:in `render_partial'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/vagrant/biblio_app/project1/app/views/channels/show.html.erb:1:in `_app_views_channels_show_html_erb___948591169__601000628'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:143:in `block in render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:161:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/template.rb:141:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/template_renderer.rb:49:in `block (2 levels) in render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/abstract_renderer.rb:38:in `block in instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/abstract_renderer.rb:38:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/template_renderer.rb:48:in `block in render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/template_renderer.rb:56:in `render_with_layout'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_view/renderer/renderer.rb:23:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/rendering.rb:97:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/rendering.rb:16:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0.rc1/lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/base.rb:189:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/callbacks.rb:432:in `_run__426881099__process_action__callbacks'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `block in instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/notifications.rb:159:in `instrument'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0.rc1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/base.rb:136:in `process'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/abstract_controller/rendering.rb:44:in `process'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal.rb:195:in `dispatch'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_controller/metal.rb:231:in `block in action'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/journey/router.rb:59:in `each'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/journey/router.rb:59:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/routing/route_set.rb:654:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0.rc1/lib/active_record/query_cache.rb:36:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0.rc1/lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activerecord-4.0.0.rc1/lib/active_record/migration.rb:366:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/callbacks.rb:392:in `_run__784447540__call__callbacks'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/rack/logger.rb:38:in `call_app'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/rack/logger.rb:21:in `block in call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/tagged_logging.rb:25:in `tagged'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/tagged_logging.rb:67:in `tagged'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/rack/logger.rb:21:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/activesupport-4.0.0.rc1/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/static.rb:64:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/engine.rb:511:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/railties-4.0.0.rc1/lib/rails/application.rb:96:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+/home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+  Rendered channels/_channel.html.erb (23.6ms)
+  Rendered channels/show.html.erb within layouts/application (75.8ms)
+Completed 500 Internal Server Error in 233ms
+
+ActionView::Template::Error (/vagrant/biblio_app/project1/app/views/channels/_channel.html.erb:17: syntax error, unexpected tSTRING_BEG, expecting ')'
+...append=( f.text_area :img_url "img url" );@output_buffer.saf...
+...                               ^):
+    14:   <div class="new-post">
+    15:   	MAKE NEW POST:
+    16:   	<%= form_for Post.new do |f| %>
+    17:   	<p><%= f.text_area :img_url "img url" %></p>
+    18:   	<p><%= f.text_area :caption %></p>
+    19:   	<p><%= f.hidden_field :user_id, value: 1 %></p>
+    20:   	<p><%= f.hidden_field :channel_id, value: 1 %></p>
+  app/views/channels/show.html.erb:1:in `_app_views_channels_show_html_erb___948591169__601000628'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (20.5ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:40:30 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (3.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 1]]
+  [1m[36mChannel Load (3.2ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered comments/_comment.html.erb (5.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (3.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (79.5ms)
+  Rendered channels/_channel.html.erb (190.8ms)
+  Rendered channels/show.html.erb within layouts/application (241.7ms)
+Completed 500 Internal Server Error in 394ms
+
+ActionView::Template::Error (undefined method `merge' for "img url":String):
+    14:   <div class="new-post">
+    15:   	MAKE NEW POST:
+    16:   	<%= form_for Post.new do |f| %>
+    17:   	<p><%= f.text_area :img_url, "img url" %></p>
+    18:   	<p><%= f.text_area :caption %></p>
+    19:   	<p><%= f.hidden_field :user_id, value: 1 %></p>
+    20:   	<p><%= f.hidden_field :channel_id, value: 1 %></p>
+  app/views/channels/_channel.html.erb:17:in `block in _app_views_channels__channel_html_erb__342536594__586879368'
+  app/views/channels/_channel.html.erb:16:in `_app_views_channels__channel_html_erb__342536594__586879368'
+  app/views/channels/show.html.erb:1:in `_app_views_channels_show_html_erb___948591169__601000628'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (44.2ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (63.3ms)
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:40:44 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (3.4ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (4.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (3.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (3.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered comments/_comment.html.erb (5.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (86.8ms)
+  Rendered channels/_channel.html.erb (158.0ms)
+  Rendered channels/show.html.erb within layouts/application (216.5ms)
+Completed 200 OK in 726ms (Views: 700.7ms | ActiveRecord: 22.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:40:45 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:40:45 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:40:45 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:40:45 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:40:45 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:40:45 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:40:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:40:46 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:40:46 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:40:46 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:40:46 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:40:46 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:40:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:40:46 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:41:02 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mChannel Load (4.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 1]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 4]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered comments/_comment.html.erb (4.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (83.5ms)
+  Rendered channels/_channel.html.erb (148.9ms)
+  Rendered channels/show.html.erb within layouts/application (203.5ms)
+Completed 200 OK in 674ms (Views: 651.5ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:41:03 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:41:03 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:41:04 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:41:04 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:41:04 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:41:04 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:41:04 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:41:04 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:41:04 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:41:05 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:41:05 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:41:05 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:41:05 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:41:05 +0000
+
+
+Started GET "/channels/1" for 10.0.2.2 at 2013-06-18 14:42:23 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mChannel Load (2.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 1]]
+  [1m[35mChannel Load (2.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered comments/_comment.html.erb (5.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (82.9ms)
+  Rendered channels/_channel.html.erb (149.4ms)
+  Rendered channels/show.html.erb within layouts/application (203.9ms)
+Completed 200 OK in 671ms (Views: 649.2ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:24 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:24 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:25 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:25 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:25 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:25 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:25 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:25 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:25 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:26 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:26 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:26 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:26 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:26 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-06-18 14:42:38 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (3.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mChannel Load (3.4ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (148.9ms)
+Completed 200 OK in 611ms (Views: 595.8ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:39 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:39 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:39 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:39 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:39 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:40 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:40 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:40 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:40 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:40 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:41 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:41 +0000
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2013-06-18 14:42:44 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered posts/show.html.erb within layouts/application (80.1ms)
+Completed 500 Internal Server Error in 316ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <%= render @channel %>
+    2: 
+    3: <div>-----------------END----------------</div>
+    4: 
+  app/views/posts/show.html.erb:1:in `_app_views_posts_show_html_erb___557152379__587848438'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.6ms)
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2013-06-18 14:42:45 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (3.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered posts/show.html.erb within layouts/application (63.3ms)
+Completed 500 Internal Server Error in 233ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object. It must implement :to_partial_path.):
+    1: <%= render @channel %>
+    2: 
+    3: <div>-----------------END----------------</div>
+    4: 
+  app/views/posts/show.html.erb:1:in `_app_views_posts_show_html_erb___557152379__587063818'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.4ms)
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2013-06-18 14:42:52 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (3.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (17.3ms)
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 582ms (Views: 566.8ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:53 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:53 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:53 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:53 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:53 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:42:53 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:53 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:54 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:54 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:54 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:54 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:54 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:54 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:42:54 +0000
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2013-06-18 14:43:10 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mChannel Load (4.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (18.1ms)
+  [1m[36mUser Load (4.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (86.5ms)
+Completed 200 OK in 588ms (Views: 569.9ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:11 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:11 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:12 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:12 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:12 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:12 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:12 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:12 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:12 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:13 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:13 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:13 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:13 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:13 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:43:32 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"adding a new comment for url2 after after render post", "post_id"=>"1"}, "commit"=>"Create Comment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (41.1ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "adding a new comment for url2 after after render post"], ["created_at", Tue, 18 Jun 2013 14:43:32 UTC +00:00], ["post_id", 1], ["updated_at", Tue, 18 Jun 2013 14:43:32 UTC +00:00]]
+  [1m[35m (10.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/comments/6
+Completed 302 Found in 64ms (ActiveRecord: 51.7ms)
+
+
+Started GET "/comments/6" for 10.0.2.2 at 2013-06-18 14:43:32 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mComment Load (6.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mPost Load (5.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered comments/show.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 503ms (Views: 489.3ms | ActiveRecord: 11.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:33 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:33 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:33 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:33 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:33 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:33 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:34 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:34 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:34 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:34 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:34 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:34 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:34 +0000
+
+
+Started GET "/comments" for 10.0.2.2 at 2013-06-18 14:43:37 +0000
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (4.1ms)[0m  [1mSELECT "comments".* FROM "comments"[0m
+  [1m[35mPost Load (5.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (3.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered comments/index.html.erb within layouts/application (30.1ms)
+Completed 200 OK in 515ms (Views: 501.8ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2013-06-18 14:43:48 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  [1m[35mChannel Load (3.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (2.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (15.9ms)
+  [1m[35mUser Load (4.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (81.9ms)
+Completed 200 OK in 634ms (Views: 616.1ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:49 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:49 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:49 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:49 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:49 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:43:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:50 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:50 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:50 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:50 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:50 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:50 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:43:50 +0000
+
+
+Started GET "/posts/1" for 10.0.2.2 at 2013-06-18 14:43:57 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered posts/_post.html.erb (51.8ms)
+  Rendered posts/show.html.erb within layouts/application (100.1ms)
+Completed 500 Internal Server Error in 246ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    1: <div class="post">
+    2:   <div class="post-imgurl">URL: <%= post.img_url %></div>
+    3:   <div class="post-caption">CAPTION: <%= post.caption %></div>
+    4:   <div class="post-channel">Channel ID: <%= post.channel.name %></div>
+    5: 
+    6: <div>----------END OF POST-----------</div>
+    7: 
+  app/views/posts/_post.html.erb:4:in `_app_views_posts__post_html_erb___265814475__586582548'
+  app/views/posts/show.html.erb:1:in `_app_views_posts_show_html_erb___557152379__588480658'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.9ms)
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2013-06-18 14:44:32 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mChannel Load (2.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (4.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (17.1ms)
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (75.2ms)
+Completed 200 OK in 541ms (Views: 523.4ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:33 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:33 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:33 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:34 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:34 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:34 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:34 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:34 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:34 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:34 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:35 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:35 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:35 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:35 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:44:42 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"this comment will show up if fixed", "post_id"=>"5"}, "commit"=>"Create Comment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (9.0ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "this comment will show up if fixed"], ["created_at", Tue, 18 Jun 2013 14:44:42 UTC +00:00], ["post_id", 5], ["updated_at", Tue, 18 Jun 2013 14:44:42 UTC +00:00]]
+  [1m[35m (48.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/comments/7
+Completed 302 Found in 75ms (ActiveRecord: 57.7ms)
+
+
+Started GET "/comments/7" for 10.0.2.2 at 2013-06-18 14:44:43 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mComment Load (3.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", "7"]]
+  [1m[35mPost Load (2.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered comments/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 469ms (Views: 459.8ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:43 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:43 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:44 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:44 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:44 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:45 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:45 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:45 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:45 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-06-18 14:44:48 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (3.1ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (4.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mChannel Load (3.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 553ms (Views: 540.9ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2013-06-18 14:44:48 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered comments/_comment.html.erb (5.8ms)
+  Rendered posts/_post.html.erb (69.6ms)
+  [1m[35mUser Load (3.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 583ms (Views: 565.7ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:49 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:49 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:49 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:50 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:50 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:50 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:50 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:50 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:51 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:51 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:51 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:51 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:44:51 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:51 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:52 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:53 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:53 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:53 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:53 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:53 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:53 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:53 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:54 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:54 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:54 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:44:54 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:45:06 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"this comment will show up NUMBER 2", "post_id"=>"5"}, "commit"=>"Create Comment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.2ms)[0m  INSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "this comment will show up NUMBER 2"], ["created_at", Tue, 18 Jun 2013 14:45:06 UTC +00:00], ["post_id", 5], ["updated_at", Tue, 18 Jun 2013 14:45:06 UTC +00:00]]
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/comments/8
+Completed 302 Found in 25ms (ActiveRecord: 16.2ms)
+
+
+Started GET "/comments/8" for 10.0.2.2 at 2013-06-18 14:45:06 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[35mComment Load (4.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", "8"]]
+  [1m[36mPost Load (4.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered comments/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 543ms (Views: 530.8ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:07 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:07 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:08 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:08 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:08 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:08 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:08 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:08 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:08 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:09 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:09 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:09 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:09 +0000
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2013-06-18 14:45:14 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (3.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mChannel Load (4.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (2.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (3.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered comments/_comment.html.erb (10.8ms)
+  Rendered posts/_post.html.erb (79.3ms)
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (141.0ms)
+Completed 200 OK in 645ms (Views: 623.6ms | ActiveRecord: 17.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:15 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:15 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:15 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:15 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:15 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:45:16 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:16 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:16 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:16 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:16 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:16 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:17 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:45:17 +0000
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2013-06-18 14:51:36 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (3.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mChannel Load (3.2ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (4.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered comments/_comment.html.erb (7.3ms)
+  Rendered posts/_post.html.erb (79.3ms)
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (143.4ms)
+Completed 200 OK in 645ms (Views: 625.0ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:37 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:37 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:37 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:37 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:37 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:38 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:38 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:38 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:38 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:38 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:38 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:38 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:39 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:51:45 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"lets see if this works", "post_id"=>"5"}, "commit"=>"Create Comment"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (8.9ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "lets see if this works"], ["created_at", Tue, 18 Jun 2013 14:51:45 UTC +00:00], ["post_id", 5], ["updated_at", Tue, 18 Jun 2013 14:51:45 UTC +00:00]]
+  [1m[35m (7.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/comments/9
+Completed 302 Found in 27ms (ActiveRecord: 16.1ms)
+
+
+Started GET "/comments/9" for 10.0.2.2 at 2013-06-18 14:51:45 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mComment Load (4.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", "9"]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  Rendered comments/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 491ms (Views: 480.5ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:46 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:46 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:46 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:46 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:46 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:46 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:47 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:47 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:47 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:47 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:47 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:47 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:47 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:47 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-06-18 14:51:54 +0000
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mUser Load (2.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 483ms (Views: 472.4ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:55 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:55 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:55 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:55 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:55 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:56 +0000
+
+
+Started GET "/posts/5" for 10.0.2.2 at 2013-06-18 14:51:56 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (3.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "5"]]
+  [1m[36mChannel Load (3.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mComment Load (3.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 5]]
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 5]]
+  Rendered comments/_comment.html.erb (11.3ms)
+  Rendered posts/_post.html.erb (116.1ms)
+  [1m[35mUser Load (3.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (193.6ms)
+Completed 200 OK in 846ms (Views: 825.4ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:57 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:57 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:57 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:57 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:57 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:58 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:58 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:58 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:58 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:58 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:58 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:51:59 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:59 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:59 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:59 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:59 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:51:59 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:00 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:00 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:00 +0000
+
+
+Started GET "/posts/4" for 10.0.2.2 at 2013-06-18 14:52:09 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (3.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mChannel Load (2.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (4.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered comments/_comment.html.erb (4.9ms)
+  Rendered posts/_post.html.erb (72.6ms)
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (135.0ms)
+Completed 200 OK in 639ms (Views: 619.1ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:10 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:10 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:10 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:11 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:11 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:11 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:11 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:11 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:11 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:12 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:12 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:12 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:12 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:52:20 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"this should work", "post_id"=>"4"}, "commit"=>"Create Comment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (9.7ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "this should work"], ["created_at", Tue, 18 Jun 2013 14:52:21 UTC +00:00], ["post_id", 4], ["updated_at", Tue, 18 Jun 2013 14:52:21 UTC +00:00]]
+  [1m[35m (11.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/comments/10
+Completed 302 Found in 33ms (ActiveRecord: 21.0ms)
+
+
+Started GET "/comments/10" for 10.0.2.2 at 2013-06-18 14:52:21 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mComment Load (2.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  Rendered comments/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 476ms (Views: 467.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:21 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:22 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:22 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:22 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:22 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:22 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:23 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:23 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:23 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:23 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:23 +0000
+
+
+Started GET "/posts/4" for 10.0.2.2 at 2013-06-18 14:52:29 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  [1m[35mChannel Load (2.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mComment Load (4.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 4]]
+  [1m[35mPost Load (5.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 4]]
+  Rendered comments/_comment.html.erb (10.1ms)
+  Rendered posts/_post.html.erb (75.9ms)
+  [1m[35mUser Load (3.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (131.0ms)
+Completed 200 OK in 611ms (Views: 586.7ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:30 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:30 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:30 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:30 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:30 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:52:31 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:31 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:31 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:31 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:31 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:31 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:31 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:32 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:52:32 +0000
+
+
+Started GET "/channels" for 10.0.2.2 at 2013-06-18 14:53:18 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels"[0m
+  Rendered channels/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 476ms (Views: 471.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:19 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:19 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:19 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:19 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:20 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:20 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:20 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:20 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:20 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 14:53:20 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (2.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "2"]]
+Completed 404 Not Found in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find Channel with id=2):
+  app/controllers/channels_controller.rb:67:in `set_channel'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (28.1ms)
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:21 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:21 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:21 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:21 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:21 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 14:53:24 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.5ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+Completed 404 Not Found in 7ms
+
+ActiveRecord::RecordNotFound (Couldn't find Channel with id=2):
+  app/controllers/channels_controller.rb:67:in `set_channel'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (37.9ms)
+
+
+Started GET "/channels/new" for 10.0.2.2 at 2013-06-18 14:53:31 +0000
+Processing by ChannelsController#new as HTML
+  Rendered channels/_form.html.erb (9.4ms)
+  Rendered channels/new.html.erb within layouts/application (85.9ms)
+Completed 200 OK in 583ms (Views: 582.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/channels" for 10.0.2.2 at 2013-06-18 14:53:57 +0000
+Processing by ChannelsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "channel"=>{"name"=>"abc", "description"=>"channel numba 2", "user"=>"2"}, "commit"=>"Create Channel"}
+Unpermitted parameters: user
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (39.6ms)[0m  [1mINSERT INTO "channels" ("created_at", "description", "name", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 18 Jun 2013 14:53:57 UTC +00:00], ["description", "channel numba 2"], ["name", "abc"], ["updated_at", Tue, 18 Jun 2013 14:53:57 UTC +00:00]]
+  [1m[35m (13.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/channels/2
+Completed 302 Found in 72ms (ActiveRecord: 53.0ms)
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 14:53:57 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.2ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  Rendered collection (0.0ms)
+  Rendered channels/_channel.html.erb (11.1ms)
+  Rendered channels/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 524ms (Views: 514.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:58 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:58 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:58 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:58 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:58 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:53:59 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:59 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:59 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:59 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:59 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:59 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:53:59 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:54:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:54:00 +0000
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-06-18 14:54:34 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "post"=>{"img_url"=>"imgur.gif", "caption"=>"this should be post number 1 for channel number 2", "user_id"=>"1", "channel_id"=>"2"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (10.8ms)[0m  INSERT INTO "posts" ("caption", "channel_id", "created_at", "img_url", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["caption", "this should be post number 1 for channel number 2"], ["channel_id", 2], ["created_at", Tue, 18 Jun 2013 14:54:34 UTC +00:00], ["img_url", "imgur.gif"], ["updated_at", Tue, 18 Jun 2013 14:54:34 UTC +00:00], ["user_id", 1]]
+  [1m[36m (6.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 29ms (ActiveRecord: 17.1ms)
+
+
+Started GET "/posts/6" for 10.0.2.2 at 2013-06-18 14:54:34 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (3.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mChannel Load (2.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (16.2ms)
+  [1m[36mUser Load (2.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (75.0ms)
+Completed 200 OK in 637ms (Views: 619.7ms | ActiveRecord: 12.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:54:35 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:54:35 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:54:35 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:54:35 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:54:35 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:54:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:54:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:54:36 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:54:36 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:54:36 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:54:36 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:54:36 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:54:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:54:37 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:55:14 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"first comment for abc stuff", "post_id"=>"6"}, "commit"=>"Create Comment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (8.2ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "first comment for abc stuff"], ["created_at", Tue, 18 Jun 2013 14:55:14 UTC +00:00], ["post_id", 6], ["updated_at", Tue, 18 Jun 2013 14:55:14 UTC +00:00]]
+  [1m[35m (6.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/comments/11
+Completed 302 Found in 24ms (ActiveRecord: 14.3ms)
+
+
+Started GET "/comments/11" for 10.0.2.2 at 2013-06-18 14:55:14 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mComment Load (3.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/show.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 503ms (Views: 492.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:15 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:15 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:15 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:15 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:16 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:16 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:16 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:16 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:16 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:16 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:16 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:17 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:17 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 14:55:20 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.3ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (2.4ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered comments/_comment.html.erb (5.8ms)
+  Rendered posts/_post.html.erb (71.6ms)
+  Rendered channels/_channel.html.erb (131.0ms)
+  Rendered channels/show.html.erb within layouts/application (184.7ms)
+Completed 200 OK in 659ms (Views: 640.6ms | ActiveRecord: 14.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:21 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:21 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:22 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:22 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:22 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:22 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:22 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:22 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:22 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:23 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:23 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:23 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:23 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:55:40 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"second!!", "post_id"=>"6"}, "commit"=>"Create Comment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (10.5ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "second!!"], ["created_at", Tue, 18 Jun 2013 14:55:40 UTC +00:00], ["post_id", 6], ["updated_at", Tue, 18 Jun 2013 14:55:40 UTC +00:00]]
+  [1m[35m (7.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/comments/12
+Completed 302 Found in 28ms (ActiveRecord: 17.9ms)
+
+
+Started GET "/comments/12" for 10.0.2.2 at 2013-06-18 14:55:40 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mComment Load (2.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", "12"]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 496ms (Views: 488.2ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:41 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:41 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:41 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:42 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:42 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:42 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:42 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:42 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:42 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:43 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:43 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:43 +0000
+
+
+Started GET "/channels" for 10.0.2.2 at 2013-06-18 14:55:50 +0000
+Processing by ChannelsController#index as HTML
+  [1m[36mChannel Load (5.9ms)[0m  [1mSELECT "channels".* FROM "channels"[0m
+  Rendered channels/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 575ms (Views: 567.7ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:51 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:51 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:52 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:52 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:52 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:55:52 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:52 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:52 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:53 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:53 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:53 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:53 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:55:53 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 14:55:55 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (2.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPost Load (4.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 2]]
+  [1m[35mChannel Load (3.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered comments/_comment.html.erb (7.4ms)
+  Rendered posts/_post.html.erb (93.0ms)
+  Rendered channels/_channel.html.erb (178.4ms)
+  Rendered channels/show.html.erb within layouts/application (253.1ms)
+Completed 200 OK in 769ms (Views: 749.9ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/users" for 10.0.2.2 at 2013-06-18 14:56:14 +0000
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (4.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (12.7ms)
+Completed 200 OK in 542ms (Views: 535.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:56:15 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:56:15 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:56:15 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:56:15 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:56:16 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:56:16 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:56:16 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:56:16 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:56:16 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:56:17 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:56:17 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:56:17 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:56:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:56:17 +0000
+
+
+Started GET "/users/1" for 10.0.2.2 at 2013-06-18 14:56:28 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 484ms (Views: 478.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 14:56:57 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (4.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered channels/_channel.html.erb (48.8ms)
+  Rendered channels/show.html.erb within layouts/application (101.0ms)
+Completed 500 Internal Server Error in 252ms
+
+ActionView::Template::Error (undefined method `username' for nil:NilClass):
+    1: <div class="channel">
+    2:   <div class="channel-name">CHANNEL NAME: <%= link_to channel.name, channel %></div>
+    3:   <div class="channel-author">MADE BY: 
+    4:     <%= link_to channel.user, channel.user.username %></div>
+    5:   <div class="channel-description">DESCRIPTION: <%= channel.description %></div>
+    6: 
+    7:   <p />
+  app/views/channels/_channel.html.erb:4:in `_app_views_channels__channel_html_erb__342536594__601415758'
+  app/views/channels/show.html.erb:1:in `_app_views_channels_show_html_erb___948591169__601000628'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (21.2ms)
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 14:57:04 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (2.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (4.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (4.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (13.6ms)
+  Rendered posts/_post.html.erb (81.2ms)
+  Rendered channels/_channel.html.erb (144.0ms)
+  Rendered channels/show.html.erb within layouts/application (198.9ms)
+Completed 200 OK in 748ms (Views: 727.9ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:57:05 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:57:05 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:57:05 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:57:05 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:57:06 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:57:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:57:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:57:06 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:57:06 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:57:06 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:57:06 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:57:07 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:57:07 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:57:07 +0000
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-06-18 14:58:18 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "post"=>{"img_url"=>"second url", "caption"=>"the second caption is", "user_id"=>"1", "channel_id"=>"2"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.4ms)[0m  INSERT INTO "posts" ("caption", "channel_id", "created_at", "img_url", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["caption", "the second caption is"], ["channel_id", 2], ["created_at", Tue, 18 Jun 2013 14:58:19 UTC +00:00], ["img_url", "second url"], ["updated_at", Tue, 18 Jun 2013 14:58:19 UTC +00:00], ["user_id", 1]]
+  [1m[36m (74.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 102ms (ActiveRecord: 82.5ms)
+
+
+Started GET "/posts/7" for 10.0.2.2 at 2013-06-18 14:58:19 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mPost Load (6.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "7"]]
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (4.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (15.8ms)
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (73.6ms)
+Completed 200 OK in 622ms (Views: 602.8ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:19 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:20 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:20 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:20 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:20 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:20 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:20 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:21 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:21 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:21 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:21 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:21 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:21 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:21 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 14:58:32 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"asdfasdf", "post_id"=>"7"}, "commit"=>"Create Comment"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (178.1ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "asdfasdf"], ["created_at", Tue, 18 Jun 2013 14:58:32 UTC +00:00], ["post_id", 7], ["updated_at", Tue, 18 Jun 2013 14:58:32 UTC +00:00]]
+  [1m[35m (6.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/comments/13
+Completed 302 Found in 195ms (ActiveRecord: 184.2ms)
+
+
+Started GET "/comments/13" for 10.0.2.2 at 2013-06-18 14:58:32 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mComment Load (3.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1[0m  [["id", "13"]]
+  [1m[35mPost Load (3.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered comments/show.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 471ms (Views: 460.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:33 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:33 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:33 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:33 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:33 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:34 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:34 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:34 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:34 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:34 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:34 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:34 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:34 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:35 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 14:58:40 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (5.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (2.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (7.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.2ms)
+  Rendered posts/_post.html.erb (137.1ms)
+  Rendered channels/_channel.html.erb (201.2ms)
+  Rendered channels/show.html.erb within layouts/application (278.3ms)
+Completed 200 OK in 824ms (Views: 798.1ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:41 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:41 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:41 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:42 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:42 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 14:58:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:42 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:42 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:42 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:43 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:43 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:43 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:43 +0000
