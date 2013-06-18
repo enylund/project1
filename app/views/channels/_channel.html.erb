@@ -1,13 +1,23 @@
 <div class="channel">
-  <div class="channel-name">CHANNEL NAME: <%= link_to channel.channel_name, channel %></div>
+  <div class="channel-name">CHANNEL NAME: <%= link_to channel.name, channel %></div>
   <div class="channel-author">MADE BY: 
     <%= link_to channel.user, channel.user %></div>
   <div class="channel-description">DESCRIPTION: <%= simple_format(channel.description) %></div>
 
-<!-- LOAD POSTS HERE -->
   <div class="posts">
-    <%= render channel.posts %>
+  	<%= render channel.posts %>
   </div>
 
+<!-- LOAD POSTS HERE -->
+  <div class="new-post">
+  	MAKE NEW POST:
+  	<%= form_for Post.new do |f| %>
+  	<p><%= f.text_area :img_url %></p>
+  	<p><%= f.text_area :caption %></p>
+  	<p><%= f.hidden_field :user_id, value: 1 %></p>
+  	<p><%= f.hidden_field :channel_id, value: 1 %></p>
+  	<p><%= f.submit %></p>
+  	<% end %>
+  </div>
 
 </div>
