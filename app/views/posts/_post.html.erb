@@ -1,10 +1,9 @@
 <div class="post">
   <div class="post-imgurl">URL: <%= post.img_url %></div>
-  <div class="post-caption">CAPTION: <%= post.caption %></div>
-  <div class="post-channel">Channel ID: <%= post.channel.name %></div>
+  <div class="post-caption">CAPTION: <%= link_to post.caption, post %></div>
+  <div class="post-channel">Channel ID: <%= link_to post.channel.name, post.channel %></div>
 
 <div>----------END OF POST-----------</div>
-
   <div class="new-comment">
     Add a new comment:
     <%= form_for Comment.new do |f| %>

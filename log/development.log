@@ -8868,3 +8868,2364 @@ Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:43 +0000
 
 
 Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 14:58:43 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:26:26 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.4ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (16.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.5ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (4.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (27.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.4ms)
+  Rendered posts/_post.html.erb (409.6ms)
+  Rendered channels/_channel.html.erb (698.2ms)
+  Rendered channels/show.html.erb within layouts/application (783.4ms)
+Completed 200 OK in 2045ms (Views: 1780.4ms | ActiveRecord: 49.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:26:29 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:26:30 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:26:30 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:26:30 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:26:30 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:26:30 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:26:30 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:26:31 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:26:31 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:26:31 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:26:31 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:26:31 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:26:31 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:26:32 +0000
+
+
+Started GET "/posts/6" for 10.0.2.2 at 2013-06-18 17:26:36 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (3.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "6"]]
+  [1m[36mChannel Load (2.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.7ms)
+  Rendered posts/_post.html.erb (95.5ms)
+  [1m[36mUser Load (3.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (262.8ms)
+Completed 200 OK in 783ms (Views: 759.6ms | ActiveRecord: 18.8ms)
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-06-18 17:28:28 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "post"=>{"img_url"=>"next image", "caption"=>"post before redirecting", "user_id"=>"1", "channel_id"=>"2"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (24.5ms)[0m  [1mINSERT INTO "posts" ("caption", "channel_id", "created_at", "img_url", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["caption", "post before redirecting"], ["channel_id", 2], ["created_at", Tue, 18 Jun 2013 17:28:28 UTC +00:00], ["img_url", "next image"], ["updated_at", Tue, 18 Jun 2013 17:28:28 UTC +00:00], ["user_id", 1]]
+  [1m[35m (13.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/8
+Completed 302 Found in 51ms (ActiveRecord: 38.0ms)
+
+
+Started GET "/posts/8" for 10.0.2.2 at 2013-06-18 17:28:28 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "8"]]
+  [1m[35mChannel Load (3.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (16.3ms)
+  [1m[35mUser Load (3.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (75.7ms)
+Completed 200 OK in 585ms (Views: 567.3ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:29 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:30 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:30 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:30 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:30 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:30 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:30 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:30 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:31 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:31 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:31 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:31 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:31 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:31 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:28:36 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (2.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (19.4ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.2ms)
+  [1m[35mCACHE (1.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (4.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (226.6ms)
+  Rendered channels/_channel.html.erb (295.5ms)
+  Rendered channels/show.html.erb within layouts/application (343.1ms)
+Completed 200 OK in 862ms (Views: 814.6ms | ActiveRecord: 43.9ms)
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:37 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:37 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:37 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:38 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:38 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:28:38 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:38 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:38 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:39 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:39 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:39 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:39 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:28:39 +0000
+
+
+Started GET "/posts" for 10.0.2.2 at 2013-06-18 17:33:43 +0000
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (4.0ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mChannel Load (3.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mChannel Load (3.4ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  Rendered posts/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 534ms (Views: 517.0ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:33:44 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:33:44 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:33:44 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:33:44 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:33:45 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:33:45 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:33:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:33:45 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:33:45 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:33:45 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:33:46 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:33:46 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:33:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:33:46 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (2.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:40:13 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (16.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (28.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (5.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (388.0ms)
+  Rendered channels/_channel.html.erb (660.2ms)
+  Rendered channels/show.html.erb within layouts/application (741.1ms)
+Completed 200 OK in 1849ms (Views: 1616.4ms | ActiveRecord: 53.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:40:16 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:40:17 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:40:17 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:40:17 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:40:17 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:40:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:40:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:40:18 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:40:18 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:40:18 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:40:18 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:40:18 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:40:19 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:40:19 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:41:43 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (5.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPost Load (3.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 2]]
+  [1m[35mChannel Load (2.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mPost Load (3.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered comments/_comment.html.erb (10.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (169.2ms)
+  Rendered channels/_channel.html.erb (235.7ms)
+  Rendered channels/show.html.erb within layouts/application (286.3ms)
+Completed 200 OK in 822ms (Views: 788.1ms | ActiveRecord: 29.1ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:41:45 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:41:45 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:41:45 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:41:45 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:41:45 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:41:45 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:41:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:41:46 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:41:46 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:41:46 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:41:46 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:41:46 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:41:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:41:46 +0000
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-06-18 17:41:56 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "post"=>{"img_url"=>"after redirect", "caption"=>"lets hope", "user_id"=>"1", "channel_id"=>"2"}, "commit"=>"Create Post"}
+  [1m[36m (4.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (22.8ms)[0m  INSERT INTO "posts" ("caption", "channel_id", "created_at", "img_url", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["caption", "lets hope"], ["channel_id", 2], ["created_at", Tue, 18 Jun 2013 17:41:56 UTC +00:00], ["img_url", "after redirect"], ["updated_at", Tue, 18 Jun 2013 17:41:56 UTC +00:00], ["user_id", 1]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/9
+  [1m[35mChannel Load (4.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to 
+Completed 500 Internal Server Error in 238ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/posts_controller.rb:39:in `create'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.0ms)
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:42:30 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.3ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (4.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (14.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (27.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (3.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (6.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (392.1ms)
+  Rendered channels/_channel.html.erb (547.5ms)
+  Rendered channels/show.html.erb within layouts/application (600.6ms)
+Completed 200 OK in 1163ms (Views: 1030.0ms | ActiveRecord: 57.1ms)
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:32 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:32 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:32 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:32 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:33 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:33 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:33 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:33 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:33 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:33 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:34 +0000
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-06-18 17:42:41 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "post"=>{"img_url"=>"try 2", "caption"=>"second try", "user_id"=>"1", "channel_id"=>"2"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (11.8ms)[0m  [1mINSERT INTO "posts" ("caption", "channel_id", "created_at", "img_url", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["caption", "second try"], ["channel_id", 2], ["created_at", Tue, 18 Jun 2013 17:42:41 UTC +00:00], ["img_url", "try 2"], ["updated_at", Tue, 18 Jun 2013 17:42:41 UTC +00:00], ["user_id", 1]]
+  [1m[35m (7.0ms)[0m  commit transaction
+  [1m[36mChannel Load (4.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/channels/2
+Completed 302 Found in 44ms (ActiveRecord: 23.7ms)
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:42:41 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (2.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 2]]
+  [1m[35mChannel Load (3.4ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered comments/_comment.html.erb (7.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (7.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 10]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (194.8ms)
+  Rendered channels/_channel.html.erb (257.1ms)
+  Rendered channels/show.html.erb within layouts/application (312.2ms)
+Completed 200 OK in 826ms (Views: 788.6ms | ActiveRecord: 34.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:42 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:43 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:43 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:43 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:43 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:42:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:44 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:44 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:44 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:44 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:44 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:42:44 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 17:43:19 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"first!1", "post_id"=>"10"}, "commit"=>"Create Comment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (13.1ms)[0m  INSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "first!1"], ["created_at", Tue, 18 Jun 2013 17:43:19 UTC +00:00], ["post_id", 10], ["updated_at", Tue, 18 Jun 2013 17:43:19 UTC +00:00]]
+  [1m[36m (10.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/comments/14
+Completed 302 Found in 39ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/comments/14" for 10.0.2.2 at 2013-06-18 17:43:19 +0000
+Processing by CommentsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mComment Load (3.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT 1  [["id", "14"]]
+  [1m[36mPost Load (3.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered comments/show.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 536ms (Views: 525.4ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:20 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:20 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:20 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:20 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:20 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:20 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:20 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:21 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:21 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:21 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:21 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:21 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:21 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:21 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:43:27 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (3.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 2]]
+  [1m[35mChannel Load (2.9ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mPost Load (3.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.5ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mPost Load (3.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered comments/_comment.html.erb (6.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 10]]
+  [1m[36mPost Load (3.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered comments/_comment.html.erb (6.4ms)
+  Rendered posts/_post.html.erb (261.8ms)
+  Rendered channels/_channel.html.erb (337.3ms)
+  Rendered channels/show.html.erb within layouts/application (391.3ms)
+Completed 200 OK in 869ms (Views: 827.7ms | ActiveRecord: 36.9ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:28 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:28 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:28 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:28 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:28 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:43:29 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:29 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:29 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:29 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:29 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:29 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:29 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:30 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:43:30 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:44:20 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (3.7ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 2]]
+  [1m[35mChannel Load (4.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mPost Load (4.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.7ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mPost Load (9.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered comments/_comment.html.erb (11.7ms)
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (4.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 10]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered comments/_comment.html.erb (5.4ms)
+  Rendered posts/_post.html.erb (265.1ms)
+  Rendered channels/_channel.html.erb (331.6ms)
+  Rendered channels/show.html.erb within layouts/application (382.0ms)
+Completed 200 OK in 862ms (Views: 814.1ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:22 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:22 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:22 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:22 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:22 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:22 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:23 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:23 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:23 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:23 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:23 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:23 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:23 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:24 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 17:44:30 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"second!", "post_id"=>"10"}, "commit"=>"Create Comment"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (11.5ms)[0m  [1mINSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "second!"], ["created_at", Tue, 18 Jun 2013 17:44:30 UTC +00:00], ["post_id", 10], ["updated_at", Tue, 18 Jun 2013 17:44:30 UTC +00:00]]
+  [1m[35m (7.1ms)[0m  commit transaction
+  [1m[36mPost Load (3.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/posts/10
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to 
+Completed 500 Internal Server Error in 268ms
+
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/comments_controller.rb:33:in `block (2 levels) in create'
+  app/controllers/comments_controller.rb:31:in `create'
+
+
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/vagrant/.rbenv/versions/2.0.0-p195/lib/ruby/gems/2.0.0/gems/actionpack-4.0.0.rc1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.6ms)
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:44:46 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (3.2ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPost Load (3.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 2]]
+  [1m[35mChannel Load (3.2ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (4.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mPost Load (3.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered comments/_comment.html.erb (27.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mPost Load (3.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered comments/_comment.html.erb (6.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  Rendered collection (0.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 10]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (8.1ms)
+  Rendered posts/_post.html.erb (405.3ms)
+  Rendered channels/_channel.html.erb (546.1ms)
+  Rendered channels/show.html.erb within layouts/application (594.8ms)
+Completed 200 OK in 1204ms (Views: 1085.9ms | ActiveRecord: 45.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:47 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:48 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:48 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:48 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:48 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:48 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:49 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:49 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:49 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:49 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:49 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 17:44:55 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"second!2", "post_id"=>"10"}, "commit"=>"Create Comment"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.2ms)[0m  INSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "second!2"], ["created_at", Tue, 18 Jun 2013 17:44:55 UTC +00:00], ["post_id", 10], ["updated_at", Tue, 18 Jun 2013 17:44:55 UTC +00:00]]
+  [1m[36m (7.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mPost Load (4.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+Redirected to http://localhost:3000/posts/10
+Completed 302 Found in 45ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/posts/10" for 10.0.2.2 at 2013-06-18 17:44:55 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "10"]]
+  [1m[35mChannel Load (3.3ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (10.1ms)
+  Rendered posts/_post.html.erb (80.8ms)
+  [1m[36mUser Load (3.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (222.6ms)
+Completed 200 OK in 694ms (Views: 670.2ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:56 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:56 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:56 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:56 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:56 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:44:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:57 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:57 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:57 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:57 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:57 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:57 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:44:58 +0000
+
+
+Started GET "/posts/10" for 10.0.2.2 at 2013-06-18 17:45:35 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mPost Load (3.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "10"]]
+  [1m[36mChannel Load (5.2ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 10]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered comments/_comment.html.erb (11.0ms)
+  Rendered posts/_post.html.erb (90.1ms)
+  [1m[35mUser Load (2.8ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (148.9ms)
+Completed 200 OK in 643ms (Views: 621.1ms | ActiveRecord: 17.3ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:45:36 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:45:36 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:45:37 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:45:37 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:45:37 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:45:37 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:45:37 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:45:37 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:45:37 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:45:38 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:45:38 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:45:38 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:45:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:45:38 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:45:40 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.2ms)
+  [1m[35mCACHE (0.2ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (4.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (4.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (9.5ms)
+  Rendered posts/_post.html.erb (337.7ms)
+  Rendered channels/_channel.html.erb (413.8ms)
+  Rendered channels/show.html.erb within layouts/application (479.7ms)
+Completed 200 OK in 990ms (Views: 950.4ms | ActiveRecord: 36.5ms)
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:48:23 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (4.5ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (4.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (9.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (4.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (4.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (10.4ms)
+  Rendered posts/_post.html.erb (252.8ms)
+  Rendered channels/_channel.html.erb (318.2ms)
+  Rendered channels/show.html.erb within layouts/application (368.0ms)
+Completed 200 OK in 957ms (Views: 915.7ms | ActiveRecord: 37.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:48:24 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:48:24 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:48:24 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:48:24 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:48:25 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:48:25 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:48:25 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:48:25 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:48:25 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:48:25 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:48:25 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:48:26 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:48:26 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:48:26 +0000
+
+
+Started GET "/posts/6" for 10.0.2.2 at 2013-06-18 17:48:32 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (3.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mChannel Load (2.8ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mPost Load (2.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered comments/_comment.html.erb (7.7ms)
+  Rendered posts/_post.html.erb (90.8ms)
+  [1m[35mUser Load (2.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (163.9ms)
+Completed 200 OK in 647ms (Views: 621.5ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:49:38 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (4.2ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (4.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (6.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (4.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (11.2ms)
+  Rendered posts/_post.html.erb (270.2ms)
+  Rendered channels/_channel.html.erb (338.5ms)
+  Rendered channels/show.html.erb within layouts/application (391.9ms)
+Completed 200 OK in 982ms (Views: 939.1ms | ActiveRecord: 39.1ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:40 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:40 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:40 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:40 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:40 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:40 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:41 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:41 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:41 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:41 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:41 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:41 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:42 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:49:54 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (3.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (10.5ms)
+  Rendered posts/_post.html.erb (236.5ms)
+  Rendered channels/_channel.html.erb (300.4ms)
+  Rendered channels/show.html.erb within layouts/application (353.4ms)
+Completed 200 OK in 911ms (Views: 871.9ms | ActiveRecord: 35.6ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:56 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:56 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:56 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:56 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:56 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:49:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:57 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:57 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:57 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:57 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:57 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:49:57 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:50:15 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (7.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (6.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (4.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (10.0ms)
+  Rendered posts/_post.html.erb (249.7ms)
+  Rendered channels/_channel.html.erb (318.1ms)
+  Rendered channels/show.html.erb within layouts/application (378.1ms)
+Completed 200 OK in 1011ms (Views: 973.8ms | ActiveRecord: 34.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:16 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:16 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:17 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:17 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:17 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:17 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:17 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:18 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:18 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:18 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:18 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:50:38 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (2.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (4.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (9.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (9.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (11.1ms)
+  Rendered posts/_post.html.erb (342.5ms)
+  Rendered channels/_channel.html.erb (409.6ms)
+  Rendered channels/show.html.erb within layouts/application (464.4ms)
+Completed 200 OK in 1249ms (Views: 1204.8ms | ActiveRecord: 41.3ms)
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:39 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:40 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:40 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:40 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:40 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:50:40 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:40 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:41 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:41 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:41 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:41 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:41 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:50:41 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:51:37 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (3.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (4.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (9.9ms)
+  Rendered posts/_post.html.erb (255.3ms)
+  Rendered channels/_channel.html.erb (320.8ms)
+  Rendered channels/show.html.erb within layouts/application (379.5ms)
+Completed 200 OK in 952ms (Views: 908.2ms | ActiveRecord: 38.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:51:38 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:51:38 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:51:39 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:51:39 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:51:39 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:51:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:51:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:51:39 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:51:40 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:51:40 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:51:40 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:51:40 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:51:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:51:40 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:52:40 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (4.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (4.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (3.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.2ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (9.4ms)
+  Rendered posts/_post.html.erb (248.0ms)
+  Rendered channels/_channel.html.erb (315.3ms)
+  Rendered channels/show.html.erb within layouts/application (378.9ms)
+Completed 200 OK in 890ms (Views: 849.8ms | ActiveRecord: 36.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:52:41 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:52:41 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:52:41 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:52:41 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:52:41 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:52:42 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:52:42 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:52:42 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:52:42 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:52:42 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:52:42 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:52:42 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:52:43 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:52:43 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:52:58 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.3ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (18.6ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (4.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (28.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.5ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (9.9ms)
+  Rendered posts/_post.html.erb (478.3ms)
+  Rendered channels/_channel.html.erb (781.4ms)
+  Rendered channels/show.html.erb within layouts/application (856.0ms)
+Completed 200 OK in 1945ms (Views: 1697.2ms | ActiveRecord: 62.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:02 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:02 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:02 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:02 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:02 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:03 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:03 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:03 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:03 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:03 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:03 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:03 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:04 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:04 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:53:46 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.4ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (3.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (7.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (6.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (9.9ms)
+  Rendered posts/_post.html.erb (249.7ms)
+  Rendered channels/_channel.html.erb (316.9ms)
+  Rendered channels/show.html.erb within layouts/application (374.5ms)
+Completed 200 OK in 883ms (Views: 844.5ms | ActiveRecord: 34.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:48 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:48 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:48 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:48 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:48 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:53:48 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:48 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:49 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:49 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:49 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:49 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:49 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:53:49 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:54:06 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (4.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.8ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.3ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (11.4ms)
+  Rendered posts/_post.html.erb (265.9ms)
+  Rendered channels/_channel.html.erb (333.8ms)
+  Rendered channels/show.html.erb within layouts/application (390.6ms)
+Completed 200 OK in 982ms (Views: 943.2ms | ActiveRecord: 35.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:07 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:08 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:08 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:08 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:08 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:08 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:08 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:09 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:09 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:09 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:09 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:09 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:09 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:54:30 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.8ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (7.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (5.4ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (9.6ms)
+  Rendered posts/_post.html.erb (243.1ms)
+  Rendered channels/_channel.html.erb (311.6ms)
+  Rendered channels/show.html.erb within layouts/application (363.9ms)
+Completed 200 OK in 822ms (Views: 783.6ms | ActiveRecord: 34.6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:31 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:32 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:32 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:32 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:32 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:54:32 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:32 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:32 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:33 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:33 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:33 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:33 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:33 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:54:33 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:55:41 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.3ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (2.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.4ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (2.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.3ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (6.2ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.3ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (5.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.3ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (4.2ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (2.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (8.9ms)
+  Rendered posts/_post.html.erb (236.2ms)
+  Rendered channels/_channel.html.erb (293.3ms)
+  Rendered channels/show.html.erb within layouts/application (342.7ms)
+Completed 200 OK in 895ms (Views: 854.0ms | ActiveRecord: 37.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:55:42 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:55:43 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:55:43 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:55:43 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:55:43 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:55:43 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:55:43 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:55:43 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:55:44 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:55:44 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:55:44 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:55:44 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:55:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:55:44 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 17:56:21 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.2ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (3.5ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (2.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (3.9ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (7.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.7ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (10.1ms)
+  Rendered posts/_post.html.erb (262.2ms)
+  Rendered channels/_channel.html.erb (359.5ms)
+  Rendered channels/show.html.erb within layouts/application (412.3ms)
+Completed 200 OK in 1047ms (Views: 1006.3ms | ActiveRecord: 36.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 17:56:23 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 17:56:23 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 17:56:23 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 17:56:23 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 17:56:23 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 17:56:24 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 17:56:24 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 17:56:24 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 17:56:24 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 17:56:24 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 17:56:24 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 17:56:24 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 17:56:25 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 17:56:25 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 18:10:57 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (4.1ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (3.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (3.9ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.5ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (2.6ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (4.8ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (4.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (8.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (10.7ms)
+  Rendered posts/_post.html.erb (262.4ms)
+  Rendered channels/_channel.html.erb (349.6ms)
+  Rendered channels/show.html.erb within layouts/application (409.9ms)
+Completed 200 OK in 908ms (Views: 863.6ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 18:10:58 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 18:10:59 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 18:10:59 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 18:10:59 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 18:10:59 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 18:10:59 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 18:10:59 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 18:11:00 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 18:11:00 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 18:11:00 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 18:11:00 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 18:11:00 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 18:11:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 18:11:00 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 18:17:53 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (3.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (3.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (2.6ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (4.2ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (28.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (3.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (6.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.1ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (8.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (10.2ms)
+  Rendered posts/_post.html.erb (400.8ms)
+  Rendered channels/_channel.html.erb (558.5ms)
+  Rendered channels/show.html.erb within layouts/application (612.7ms)
+Completed 200 OK in 1251ms (Views: 1116.8ms | ActiveRecord: 55.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 18:17:55 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 18:17:55 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 18:17:55 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 18:17:55 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 18:17:55 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 18:17:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 18:17:56 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 18:17:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 18:17:56 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 18:17:56 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 18:17:56 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 18:17:56 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 18:17:57 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 18:17:57 +0000
+
+
+Started POST "/posts" for 10.0.2.2 at 2013-06-18 18:18:07 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "post"=>{"img_url"=>"again", "caption"=>"another caption", "user_id"=>"1", "channel_id"=>"2"}, "commit"=>"Create Post"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (24.1ms)[0m  INSERT INTO "posts" ("caption", "channel_id", "created_at", "img_url", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)  [["caption", "another caption"], ["channel_id", 2], ["created_at", Tue, 18 Jun 2013 18:18:07 UTC +00:00], ["img_url", "again"], ["updated_at", Tue, 18 Jun 2013 18:18:07 UTC +00:00], ["user_id", 1]]
+  [1m[36m (39.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mChannel Load (4.5ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/channels/2
+Completed 302 Found in 86ms (ActiveRecord: 68.3ms)
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 18:18:07 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mChannel Load (4.4ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mPost Load (3.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?  [["channel_id", 2]]
+  [1m[36mChannel Load (2.7ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.6ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 6]]
+  [1m[36mPost Load (3.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 7]]
+  [1m[36mPost Load (3.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 7]]
+  Rendered comments/_comment.html.erb (6.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[35mCACHE (0.1ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.9ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 10]]
+  [1m[35mPost Load (3.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  Rendered comments/_comment.html.erb (9.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (2.9ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 11]]
+  Rendered collection (0.0ms)
+  Rendered posts/_post.html.erb (269.4ms)
+  Rendered channels/_channel.html.erb (331.1ms)
+  Rendered channels/show.html.erb within layouts/application (384.5ms)
+Completed 200 OK in 874ms (Views: 828.2ms | ActiveRecord: 41.6ms)
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:08 +0000
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:08 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:08 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:08 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:09 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:09 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:09 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:10 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:10 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:10 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:10 +0000
+
+
+Started POST "/comments" for 10.0.2.2 at 2013-06-18 18:18:14 +0000
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ENP7cbtPjSyE/aNSvkmVJ5Ur/2YwS1X6umb/DE5ge8I=", "comment"=>{"content"=>"adsf", "post_id"=>"11"}, "commit"=>"Create Comment"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (9.7ms)[0m  INSERT INTO "comments" ("content", "created_at", "post_id", "updated_at") VALUES (?, ?, ?, ?)  [["content", "adsf"], ["created_at", Tue, 18 Jun 2013 18:18:15 UTC +00:00], ["post_id", 11], ["updated_at", Tue, 18 Jun 2013 18:18:15 UTC +00:00]]
+  [1m[36m (7.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 11]]
+Redirected to http://localhost:3000/posts/11
+Completed 302 Found in 37ms (ActiveRecord: 20.8ms)
+
+
+Started GET "/posts/11" for 10.0.2.2 at 2013-06-18 18:18:15 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPost Load (3.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "11"]]
+  [1m[35mChannel Load (3.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (2.8ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mPost Load (3.8ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 11]]
+  Rendered comments/_comment.html.erb (5.9ms)
+  Rendered posts/_post.html.erb (70.4ms)
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (209.5ms)
+Completed 200 OK in 662ms (Views: 638.2ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/assets/channels.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:16 +0000
+
+
+Started GET "/assets/comments.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:16 +0000
+
+
+Started GET "/assets/posts.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:16 +0000
+
+
+Started GET "/assets/users.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:16 +0000
+
+
+Started GET "/assets/application.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:16 +0000
+
+
+Started GET "/assets/scaffolds.css?body=1" for 10.0.2.2 at 2013-06-18 18:18:16 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:16 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:17 +0000
+
+
+Started GET "/assets/turbolinks.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:17 +0000
+
+
+Started GET "/assets/channels.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:17 +0000
+
+
+Started GET "/assets/comments.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:17 +0000
+
+
+Started GET "/assets/posts.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:17 +0000
+
+
+Started GET "/assets/users.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 10.0.2.2 at 2013-06-18 18:18:18 +0000
+
+
+Started GET "/channels/2" for 10.0.2.2 at 2013-06-18 18:18:29 +0000
+Processing by ChannelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mChannel Load (3.6ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mPost Load (3.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."channel_id" = ?[0m  [["channel_id", 2]]
+  [1m[35mChannel Load (3.2ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.1ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered comments/_comment.html.erb (10.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.6ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 7]]
+  [1m[35mPost Load (4.9ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 7]]
+  Rendered comments/_comment.html.erb (7.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (4.0ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 8]]
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.7ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 9]]
+  Rendered collection (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1[0m  [["id", 2]]
+  [1m[35mComment Load (3.1ms)[0m  SELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?  [["post_id", 10]]
+  [1m[36mPost Load (2.8ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 10]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 10]]
+  Rendered comments/_comment.html.erb (9.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.0ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 11]]
+  [1m[35mPost Load (2.7ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 11]]
+  Rendered comments/_comment.html.erb (4.9ms)
+  Rendered posts/_post.html.erb (392.3ms)
+  Rendered channels/_channel.html.erb (475.7ms)
+  Rendered channels/show.html.erb within layouts/application (548.9ms)
+Completed 200 OK in 1061ms (Views: 1011.8ms | ActiveRecord: 44.2ms)
+
+
+Started GET "/posts/6" for 10.0.2.2 at 2013-06-18 18:19:04 +0000
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPost Load (2.7ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", "6"]]
+  [1m[35mChannel Load (4.2ms)[0m  SELECT "channels".* FROM "channels" WHERE "channels"."id" = ? ORDER BY "channels"."id" ASC LIMIT 1  [["id", 2]]
+  [1m[36mComment Load (3.4ms)[0m  [1mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = ?[0m  [["post_id", 6]]
+  [1m[35mPost Load (3.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."id" = ? ORDER BY "posts"."id" ASC LIMIT 1[0m  [["id", 6]]
+  Rendered comments/_comment.html.erb (8.2ms)
+  Rendered posts/_post.html.erb (99.0ms)
+  [1m[35mUser Load (2.9ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (178.5ms)
+Completed 200 OK in 652ms (Views: 631.4ms | ActiveRecord: 16.4ms)
