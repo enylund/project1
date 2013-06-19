@@ -1,3 +1,4 @@
+<%= @comment = Comment.new %>
 <%= form_for(@comment) do |f| %>
   <% if @comment.errors.any? %>
     <div id="error_explanation">
@@ -15,15 +16,24 @@
     <%= f.label :content %><br>
     <%= f.text_field :content %>
   </div>
-  <div class="field">
-    <%= f.label :post %><br>
-    <%= f.text_field :post %>
-  </div>
-  <div class="field">
-    <%= f.label :user %><br>
-    <%= f.text_field :user %>
-  </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :post_id, value: @post.id %>
   <div class="actions">
     <%= f.submit %>
   </div>
+<% end %>
+
+<% if nil %>
+<div class="new-comment">
+  Add a new comment:
+  <%= form_for Comment.new do |f| %>
+  <div>
+    <%= f.label :content %><br>
+    <%= f.text_field :content %>
+  </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :post_id, value: @post.id %>
+  <p><%= f.submit %></p>
+  <% end %>
+</div>
 <% end %>

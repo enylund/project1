@@ -1,3 +1,4 @@
+<%= @channel = Channel.new %>
 <%= form_for(@channel) do |f| %>
   <% if @channel.errors.any? %>
     <div id="error_explanation">
@@ -19,10 +20,7 @@
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
-  <div class="field">
-    <%= f.label :user %><br>
-    <%= f.text_field :user %>
-  </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
   <div class="actions">
     <%= f.submit %>
   </div>

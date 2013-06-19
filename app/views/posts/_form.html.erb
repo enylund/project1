@@ -1,3 +1,4 @@
+<%= @post = Post.new %>
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -19,15 +20,23 @@
     <%= f.label :caption %><br>
     <%= f.text_field :caption %>
   </div>
-  <div class="field">
-    <%= f.label :user %><br>
-    <%= f.text_field :user %>
-  </div>
-  <div class="field">
-    <%= f.label :channel %><br>
-    <%= f.text_field :channel %>
-  </div>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <%= f.hidden_field :channel_id, value: @channel.id %>
   <div class="actions">
     <%= f.submit %>
+  </div>
+<% end %>
+
+
+<% if nil %>
+  <div class="new-post">
+    MAKE NEW POST:
+    <%= form_for Post.new do |f| %>
+    <p><%= f.text_area :img_url, value: "img url" %></p>
+    <p><%= f.text_area :caption, value: "caption" %></p>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :channel_id, value: channel.id %>
+    <p><%= f.submit %></p>
+    <% end %>
   </div>
 <% end %>
