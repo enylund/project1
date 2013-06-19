@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130617205246) do
+ActiveRecord::Schema.define(version: 20130618025653) do
 
   create_table "channels", force: true do |t|
     t.string   "name"
@@ -49,9 +49,10 @@ ActiveRecord::Schema.define(version: 20130617205246) do
   create_table "users", force: true do |t|
     t.string   "username"
     t.string   "email"
-    t.string   "password"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "hashed_password"
+    t.string   "salt"
   end
 
 end
