@@ -1,1 +1,16 @@
 <%= render @post %>
+
+<div class="new-comment">
+  Add a new comment:
+  <%= form_for Comment.new do |f| %>
+  <p><%= f.text_area :content %></p>
+  <p><%= f.hidden_field :user_id, value: current_user.id %></p>
+  <p><%= f.hidden_field :post_id, value: @post.id %></p>
+  <p><%= f.submit %></p>
+  <% end %>
+</div>
+
+
+<div class="comments">
+  <%= render @post.comments %>
+</div>
