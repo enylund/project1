@@ -9,12 +9,13 @@ class AccessController < ApplicationController
   def attempt_login
     authorized_user = User.authenticate(params[:user][:username], params[:user][:password])
     if authorized_user
-      session[:user_id] = params[:user][:id]
+      @the_user = User.find_by_username(params[:user][:username])
+      session[:user_id] = @the_user.id
       flash[:notice] = "You have successfully logged in"
-      redirect_to user_path(session[:user_id])
+      redirect_to user_path(1)
     else
       flash[:notice] = "Invalid username or password"
-      redirect_to login_path
+      redirect_to :back
     end
   end
 end
