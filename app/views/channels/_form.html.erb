@@ -1,4 +1,5 @@
-<%= @channel = Channel.new %>
+<% @channel = Channel.new %>
+New Channel
 <%= form_for(@channel) do |f| %>
   <% if @channel.errors.any? %>
     <div id="error_explanation">
