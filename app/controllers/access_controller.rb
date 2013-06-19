@@ -11,9 +11,10 @@ class AccessController < ApplicationController
     if authorized_user
       session[:user_id] = params[:user][:id]
       flash[:notice] = "You have successfully logged in"
-      redirect_to users_path
+      redirect_to user_path(session[:user_id])
     else
-      redirect_to channels_path
+      flash[:notice] = "Invalid username or password"
+      redirect_to login_path
     end
   end
 end
