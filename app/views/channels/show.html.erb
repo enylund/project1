@@ -1,2 +1,6 @@
-<%= render :partial => '/follow_channels/follow' %>
+<% if @test.blank? %>
+  <%= render :partial => '/follow_channels/follow' %>
+<% else %>
+  <%= render :partial => '/follow_channels/unfollow' %>
+<% end %>
 <%= render @channel %>
