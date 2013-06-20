@@ -1,11 +1,7 @@
 BiblioApp::Application.routes.draw do
+  devise_for :users
   post "follow_channels/create"
   delete "follow_channels/destroy"
-  get "access/menu"
-  get "access/login", :as => 'login'
-  get "logout" => 'access#destroy', :as => 'logout'
-  post "access/attempt_login"
-  match "login" => 'access#login', :via => :get
 
   resources :channels
 
@@ -17,7 +13,7 @@ BiblioApp::Application.routes.draw do
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".  # You can have the root of your site routed with "root"
-   root 'users#home'
+   root "channels#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

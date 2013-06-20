@@ -1,9 +1,9 @@
 <%= render @post %>
 
-<% if current_user %>
+<% if user_signed_in? %>
   <%= render 'comments/form' %>
 <% else %>
-  <%= link_to "Login", login_path %> to comment!
+  ###LOGIN### to comment!
 <% end %>
 
 <div class="comments">

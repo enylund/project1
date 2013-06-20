@@ -8,9 +8,9 @@
   <div class="posts">
   	<%= render channel.posts %>
   </div>
-<% if current_user %>
+<% if user_signed_in? %>
   <%= render 'posts/form' %>
 <% else %>
-  <%= link_to "Login", login_path %> to add a post!
+  ###LOGIN### to add a post!
 <% end %>
 </div>
