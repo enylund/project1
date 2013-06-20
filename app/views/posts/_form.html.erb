@@ -1,43 +1,20 @@
-<% @post = Post.new %>
-New post:
-<%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+<div class="new-post">
+  MAKE NEW POST:
 
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <%= form_for Post.new do |f| %>
+
+    <div class="field">
+      <%= f.label :img_url %><br>
+      <%= f.text_field :img_url %>
+    </div>
+    <div class="field">
+      <%= f.label :caption %><br>
+      <%= f.text_field :caption %>
+    </div>
+    <%= f.hidden_field :user_id, value: current_user.id %>
+    <%= f.hidden_field :channel_id, value: @channel.id %>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :img_url %><br>
-    <%= f.text_field :img_url %>
-  </div>
-  <div class="field">
-    <%= f.label :caption %><br>
-    <%= f.text_field :caption %>
-  </div>
-  <%= f.hidden_field :user_id, value: current_user.id %>
-  <%= f.hidden_field :channel_id, value: @channel.id %>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
-
-
-<% if nil %>
-  <div class="new-post">
-    MAKE NEW POST:
-    <%= form_for Post.new do |f| %>
-    <p><%= f.text_area :img_url, value: "img url" %></p>
-    <p><%= f.text_area :caption, value: "caption" %></p>
-    <%= f.hidden_field :user_id, value: current_user.id %>
-    <%= f.hidden_field :channel_id, value: channel.id %>
-    <p><%= f.submit %></p>
-    <% end %>
-  </div>
-<% end %>
+</div>
