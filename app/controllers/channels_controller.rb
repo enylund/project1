@@ -10,6 +10,10 @@ class ChannelsController < ApplicationController
   # GET /channels/1
   # GET /channels/1.json
   def show
+    @current_user_id = current_user.id
+    @current_channel_id = params[:id].to_i
+
+    @test = FollowChannel.where(:user_id => @current_user_id, :channel_id => @current_channel_id)
   end
 
   # GET /channels/new
