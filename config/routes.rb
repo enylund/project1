@@ -1,4 +1,6 @@
 BiblioApp::Application.routes.draw do
+  post "follow_channels/create"
+  delete "follow_channels/destroy"
   get "access/menu"
   get "access/login", :as => 'login'
   get "logout" => 'access#destroy', :as => 'logout'
