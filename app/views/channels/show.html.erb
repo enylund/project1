@@ -1,6 +1,8 @@
-<% if @test.blank? %>
+<% if @allowed_to_follow == true && @test.blank? == true %>
   <%= render :partial => '/follow_channels/follow' %>
-<% else %>
+<% elsif @allowed_to_follow == true && @test.blank? == false %>
   <%= render :partial => '/follow_channels/unfollow' %>
+<%else%>
+  <h3>You created this channel</h3>
 <% end %>
 <%= render @channel %>

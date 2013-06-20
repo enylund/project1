@@ -12,8 +12,11 @@ class ChannelsController < ApplicationController
   def show
     @current_user_id = current_user.id
     @current_channel_id = params[:id].to_i
-
-    @test = FollowChannel.where(:user_id => @current_user_id, :channel_id => @current_channel_id)
+    @channel_creator_id = Channel.find(@current_channel_id).user_id
+    if @channel_creator_id != @current_user_id
+      @allowed_to_follow = true
+      @test = FollowChannel.where(:user_id => @current_user_id, :channel_id => @current_channel_id)
+    end
   end
 
   # GET /channels/new
