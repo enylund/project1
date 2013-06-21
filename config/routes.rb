@@ -1,5 +1,5 @@
 BiblioApp::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :path_prefix => 'my'
   post "follow_channels/create"
   delete "follow_channels/destroy"
 
