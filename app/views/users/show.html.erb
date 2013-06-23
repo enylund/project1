@@ -1,13 +1,15 @@
 <br /><br />
-    <h1>Activity on channels you created:</h1>
+<h1><%= (current_user.id == @user.id) ? "Your":@user.email+"'s" %> page</h1>
+<br /><br />
+    <h2>Activity on channels you created:</h2>
     <% @user.channels.each do |channel| %>
         <h3><%= link_to channel.name, channel_path(channel.id.to_i) %></h3>
       <% channel.posts.find(:all, :order => "id desc", :limit => 1).each do |post| %>
-          <h3><%= post.img_url %></h3>
+        <h3><%= post.img_url %></h3>
       <% end %>
     <% end %>
     <br /><br />
-    <h1>Activity on channels you follow:</h1>
+    <h2>Activity on channels you follow:</h2>
     <% @array_of_channels_a_user_follows.each do |channel| %>
       <h3><%= link_to channel.name, channel_path(channel.id.to_i) %></h3>
        <% channel.posts.find(:all, :order => "id desc", :limit => 1).each do |post| %>

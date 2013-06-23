@@ -1,6 +1,6 @@
 class ChannelsController < ApplicationController
   before_action :set_channel, only: [:show, :edit, :update, :destroy]
-
+  before_action :privacy_check, only: [:show, :edit, :update, :destroy]
   # GET /channels
   # GET /channels.json
   def index
@@ -76,8 +76,20 @@ class ChannelsController < ApplicationController
       @channel = Channel.find(params[:id])
     end
 
+    def privacy_check
+      @channel = Channel.find(params[:id])
+      @privacy = @channel.privacy
+      @postable = true
+      if @privacy == 'private' && (current_user != @channel.user_id)
+        flash[:notice] = "This is a private channel. If you created this channel, please log in to view."
+        redirect_to new_user_session_path
+      elsif @privacy == 'closed' && (current_user != @channel.user_id)
+        return @postable = false
+      end
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def channel_params
-      params.require(:channel).permit(:name, :description, :user_id)
+      params.require(:channel).permit(:name, :description, :user_id, :privacy)
     end
 end

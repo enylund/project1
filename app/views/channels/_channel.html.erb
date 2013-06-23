@@ -8,7 +8,7 @@
   <div class="posts">
   	<%= render channel.posts %>
   </div>
-<% if user_signed_in? %>
+<% if user_signed_in? && @postable == true %>
   <%= render 'posts/form' %>
 <% else %>
   ###LOGIN### to add a post!
