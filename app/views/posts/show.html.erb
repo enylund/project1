@@ -3,7 +3,7 @@
 <% if user_signed_in? %>
   <%= render 'comments/form' %>
 <% else %>
-  ###LOGIN### to comment!
+  <%= link_to "Sign in", new_user_session_path %> to comment!
 <% end %>
 
 <div class="comments">
