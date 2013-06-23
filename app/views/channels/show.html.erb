@@ -11,8 +11,10 @@
 <%= render @channel %>
 
 <br /><br />
-<h2>List of channel followers</h2>
+<% if @add_followers_to_view %>
+  <h2>List of channel followers</h2>
 <% @array_of_channel_followers.each do |row| %>
   <h3><%= link_to row.username, user_path(row.id) %></h3>
+<% end %>
 <% end %>
 
