@@ -1,7 +1,7 @@
 <br /><br />
 <h1><%= (current_user.id == @user.id) ? "Your":@user.email+"'s" %> page</h1>
 <br /><br />
-    <h2>Activity on channels you created:</h2>
+<h2>Activity on <%= (current_user.id == @user.id) ? 'channels you created' : @user.email + "'s channels" %>  :</h2>
     <% @user.channels.each do |channel| %>
         <h3><%= link_to channel.name, channel_path(channel.id.to_i) %></h3>
       <% channel.posts.find(:all, :order => "id desc", :limit => 1).each do |post| %>
@@ -9,7 +9,7 @@
       <% end %>
     <% end %>
     <br /><br />
-    <h2>Activity on channels you follow:</h2>
+    <h2>Activity on channels <%= (current_user.id == @user.id) ? 'you follow' : @user.email + " follows" %>:</h2>
     <% @array_of_channels_a_user_follows.each do |channel| %>
       <h3><%= link_to channel.name, channel_path(channel.id.to_i) %></h3>
        <% channel.posts.find(:all, :order => "id desc", :limit => 1).each do |post| %>
