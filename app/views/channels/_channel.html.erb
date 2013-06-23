@@ -1,5 +1,6 @@
 <div class="channel">
   <div class="channel-name">CHANNEL NAME: <%= link_to channel.name, channel %></div>
+  <div class="channel-privacyi">This channel is: <%= channel.privacy %></div>
   <div class="channel-author">MADE BY: 
     <%= link_to channel.user.username, channel.user %></div>
   <div class="channel-description">DESCRIPTION: <%= channel.description %></div>

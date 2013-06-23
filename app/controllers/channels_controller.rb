@@ -10,6 +10,7 @@ class ChannelsController < ApplicationController
   # GET /channels/1
   # GET /channels/1.json
   def show
+    array_of_channel_followers()
     if user_signed_in?
       @current_user_id = current_user.id
       @current_channel_id = params[:id].to_i
@@ -68,6 +69,17 @@ class ChannelsController < ApplicationController
       format.html { redirect_to channels_url }
       format.json { head :no_content }
     end
+  end
+
+  def array_of_channel_followers
+    follow_rows = []
+    follow_rows << FollowChannel.find_by_channel_id(params[:id])
+    followers_user_ids = []
+    follow_rows.each do |row|
+      followers_user_ids << row.user_id
+    end
+    @array_of_channel_followers = User.find(followers_user_ids)
+    # raise @array_of_channel_followers.to_yaml
   end
 
   private
