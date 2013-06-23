@@ -2,7 +2,7 @@
 <h1><%= (current_user.id == @user.id) ? "Your":@user.email+"'s" %> page</h1>
 <br /><br />
 <h2>Activity on <%= (current_user.id == @user.id) ? 'channels you created' : @user.email + "'s channels" %>  :</h2>
-    <% @user.channels.each do |channel| %>
+    <% @channels_to_show.each do |channel| %>
         <h3><%= link_to channel.name, channel_path(channel.id.to_i) %></h3>
       <% channel.posts.find(:all, :order => "id desc", :limit => 1).each do |post| %>
         <h3><%= post.img_url %></h3>
