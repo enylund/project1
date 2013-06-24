@@ -1,0 +1,13 @@
+<div class="update-privacy">
+   Update Privacy:
+   <%= form_for @channel do |f| %>
+      <div class="field">
+        <%= f.radio_button :privacy, 'open', :checked => true %><%= f.label 'Open' %>
+        <%= f.radio_button :privacy, 'closed' %><%= f.label 'Closed' %>
+        <%= f.radio_button :privacy, 'private' %><%= f.label 'Private' %>
+      </div>
+      <div class="actions">
+        <%= f.submit %>
+      </div>
+   <% end %>
+</div>
