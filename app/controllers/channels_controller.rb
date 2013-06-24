@@ -79,7 +79,7 @@ class ChannelsController < ApplicationController
 
   def array_of_channel_followers
     follow_rows = []
-    follow_rows << FollowChannel.find_by_channel_id(params[:id])
+    follow_rows = FollowChannel.where(:channel_id => params[:id]).all
     followers_user_ids = []
     follow_rows.each do |row|
       followers_user_ids << row.user_id
