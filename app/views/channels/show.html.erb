@@ -7,7 +7,9 @@
     <h3>You created this channel</h3>
   <% end %>
 <% end %>
-
+<%if user_signed_in? && current_user.id == @channel.user_id %>
+    <%= render 'destroychannel' %>
+<%end%>
 <%= render @channel %>
 
 <br /><br />
