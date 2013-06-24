@@ -72,7 +72,7 @@ class ChannelsController < ApplicationController
   def destroy
     @channel.destroy
     respond_to do |format|
-      format.html { redirect_to channels_url }
+      format.html { redirect_to user_path(current_user.id) }
       format.json { head :no_content }
     end
   end
