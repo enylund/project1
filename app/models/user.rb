@@ -1,3 +1,4 @@
+require 'open-uri'
 class User < ActiveRecord::Base
   has_many :channels
   has_many :posts
@@ -13,6 +14,12 @@ class User < ActiveRecord::Base
 
   validates :username, :uniqueness => { :case_sensitive => false }
 
+  has_attached_file :avatar, 
+                    :styles => { :medium => "300x300>", :thumb => "100x100>" },
+                    :default_url => "http://www.lageneralins.com/insurance-blog/wp-content/uploads/2013/04/Man-Asking-Questions-300x300.png"
+                    
+  attr_accessible :avatar
+
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
@@ -21,4 +28,9 @@ class User < ActiveRecord::Base
       where(conditions).first
     end
   end
+
+  def avatar_from_url(url)
+  self.avatar = URI.parse(url)
+  end
 end
+
