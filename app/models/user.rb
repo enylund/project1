@@ -33,3 +33,4 @@ class User < ActiveRecord::Base
   self.avatar = URI.parse(url)
   end
 end
+
