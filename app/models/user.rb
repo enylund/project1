@@ -14,11 +14,7 @@ class User < ActiveRecord::Base
 
   validates :username, :uniqueness => { :case_sensitive => false }
 
-  has_attached_file :avatar, 
-                    :styles => { :medium => "300x300>", :thumb => "100x100>" },
-                    :default_url => "http://www.lageneralins.com/insurance-blog/wp-content/uploads/2013/04/Man-Asking-Questions-300x300.png"
-                    
-  attr_accessible :avatar
+  has_attached_file :avatar, :styles => { :medium => "300x300>", :thumb => "100x100>" }, :default_url => ":style/a598609adcd811e2a1e322000a9e0853_7.jpg"
 
   def self.find_first_by_auth_conditions(warden_conditions)
     conditions = warden_conditions.dup

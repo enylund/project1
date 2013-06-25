@@ -24,7 +24,4 @@ class UsersController < ApplicationController
     @array_of_channels_a_user_follows = Channel.find(the_channels)
   end
 
-  def avatar_params
-    params.require(:user).permit(:avatar)
-  end
 end

@@ -1,8 +1,7 @@
 <br /><br />
 <h1><%= (current_user.id == @user.id) ? "Your":@user.username+"'s" %> page</h1>
 <p>
-  <%= image_tag @user.avatar.url %>
- <!--  <%= image_tag @user.avatar_from_url "http://www.lageneralins.com/insurance-blog/wp-content/uploads/2013/04/Man-Asking-Questions-300x300.png" %> -->
+  <%= image_tag @user.avatar.url(:thumb) %>
 </p>
 <br /><br />
 <h2>Activity on <%= (current_user.id == @user.id) ? 'channels you created' : @user.username + "'s channels" %>  :</h2>
