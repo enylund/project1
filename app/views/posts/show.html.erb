@@ -1,11 +1,13 @@
-<%= render @post %>
+<% if !@privacy %>
+  <%= render @post %>
 
-<% if user_signed_in? %>
-  <%= render 'comments/form' %>
-<% else %>
-  <%= link_to "Sign in", new_user_session_path %> to comment!
+  <% if user_signed_in? %>
+    <%= render 'comments/form' %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path %> to comment!
+  <% end %>
+
+  <div class="comments">
+    <%= render @post.comments %>
+  </div>
 <% end %>
-
-<div class="comments">
-  <%= render @post.comments %>
-</div>
