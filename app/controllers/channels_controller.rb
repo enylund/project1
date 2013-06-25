@@ -98,11 +98,11 @@ class ChannelsController < ApplicationController
       @channel = Channel.find(params[:id])
       @privacy = @channel.privacy
       @postable = true
-      if @privacy == 'private' && (current_user != @channel.user_id)
+      if @privacy == 'private' && (current_user != @channel.user)
         flash[:notice] = "This is a private channel. If you created this channel, please log in to view."
         redirect_to new_user_session_path
-      elsif @privacy == 'closed' && (current_user != @channel.user_id)
-        return @postable = false
+      elsif @privacy == 'closed' && (current_user != @channel.user)
+        @postable = false
       end
     end
 
