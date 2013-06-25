@@ -2,7 +2,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-
     private_channel_show_check()
     create_array_of_followed_channels_to_show()
 

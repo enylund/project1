@@ -14,6 +14,7 @@
   	<% else %>
   	  <%= link_to "Sign in", new_user_session_path %> or 
   	  <%= link_to "sign up", new_user_registration_path %>
+      <div><%= render 'devise/sessions/form' %></div>
   	<% end %>
 <% flash.each do |name, msg| %>		
 	<%= content_tag :div, msg, :id => "flash_#{name}"%>
