@@ -23,5 +23,4 @@ class UsersController < ApplicationController
     @array_of_channels_a_user_follows = Channel.find(the_channels)
   end
 
-
 end

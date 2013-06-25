@@ -72,14 +72,14 @@ class ChannelsController < ApplicationController
   def destroy
     @channel.destroy
     respond_to do |format|
-      format.html { redirect_to channels_url }
+      format.html { redirect_to user_path(current_user.id) }
       format.json { head :no_content }
     end
   end
 
   def array_of_channel_followers
     follow_rows = []
-    follow_rows << FollowChannel.find_by_channel_id(params[:id])
+    follow_rows = FollowChannel.where(:channel_id => params[:id]).all
     followers_user_ids = []
     follow_rows.each do |row|
       followers_user_ids << row.user_id

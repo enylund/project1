@@ -1,5 +1,8 @@
 <br /><br />
 <h1><%= (user_signed_in? && current_user.id == @user.id) ? "Your":@user.username+"'s" %> page</h1>
+<p>
+  <%= image_tag @user.avatar.url(:thumb) %>
+</p>
 <br /><br />
 <h2>Activity on <%= (user_signed_in? && current_user.id == @user.id) ? 'channels you created' : @user.username + "'s channels" %>  :</h2>
     <% @channels_to_show.each do |channel| %>
