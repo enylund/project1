@@ -9,7 +9,7 @@
 <body>
   <div id="user_nav">
   	<% if user_signed_in? %>
-  	  Signed in as <%= current_user.username %> with email: <%= link_to current_user.email, user_path(current_user) %>. Not you?
+  	  Signed in as <%= link_to current_user.username, user_path(current_user) %> with email: <%= link_to current_user.email, edit_user_registration_path %>. Not you?
   	  <%= link_to "Sign out", destroy_user_session_path %>
   	<% else %>
   	  <%= link_to "Sign in", new_user_session_path %> or 
