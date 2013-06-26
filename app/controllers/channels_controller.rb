@@ -18,12 +18,9 @@ class ChannelsController < ApplicationController
     @add_followers_to_view = true
   end
     if user_signed_in?
-      @current_user_id = current_user.id
-      @current_channel_id = params[:id].to_i
-      @channel_creator_id = Channel.find(@current_channel_id).user_id
-      if @channel_creator_id != @current_user_id
+      if @channel.user != current_user
         @allowed_to_follow = true
-        @test = FollowChannel.where(:user_id => @current_user_id, :channel_id => @current_channel_id)
+        @test = FollowChannel.where(:user_id => current_user.id, :channel_id => params[:id])
       end
     end
   end
@@ -98,13 +95,13 @@ class ChannelsController < ApplicationController
     end
 
     def privacy_check
-      @channel = Channel.find(params[:id])
       privacy = @channel.privacy
       @postable = true
       if privacy == 'private' && (current_user != @channel.user)
         flash[:notice] = "This is a private channel. If you created this channel, please log in to view."
         redirect_to root_path
       elsif privacy == 'closed' && (current_user != @channel.user)
+        @closed = true
         @postable = false
       end
     end

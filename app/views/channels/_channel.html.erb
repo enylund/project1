@@ -14,7 +14,9 @@
   </div>
 <% if user_signed_in? && @postable %>
   <%= render 'posts/form' %>
-<% else %>
+<% elsif @closed %>
   This channel is closed.
+<% elsif !user_signed_in? && !@closed %>
+  <%= link_to "Sign in", new_user_session_path %> to post!
 <% end %>
 </div>
