@@ -10,7 +10,7 @@ class ChannelsController < ApplicationController
   # GET /channels/1
   # GET /channels/1.json
   def show
-  @channel = Channel.find(params[:id])
+  @title = @channel.user.username + "'s " + @channel.name + " channel"
   followers_count =  FollowChannel.count(:conditions => { :channel_id => params[:id] })
   @add_followers_to_view = false
   unless followers_count < 1

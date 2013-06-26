@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @title = "Post by " + @post.user.username + " on " + @post.channel.name
   end
 
   # GET /posts/new

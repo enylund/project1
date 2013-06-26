@@ -4,7 +4,7 @@
 <h2>Activity on <%= (user_signed_in? && current_user == @user) ? 'channels you created' : @user.username + "'s channels" %>  :</h2>
     <% @channels_to_show.each do |channel| %>
         <h3><%= link_to channel.name, channel_path(channel) %></h3>
-      <% channel.posts.find(:all, :order => "id desc", :limit => 1).each do |post| %>
+      <% channel.posts.last(2).reverse.each do |post| %>
         <h3><%= post.img_url %></h3>
       <% end %>
     <% end %>
@@ -12,7 +12,7 @@
     <h2>Activity on channels <%= (user_signed_in? && current_user == @user) ? 'you follow' : @user.username + " follows" %>:</h2>
     <% @array_of_channels_a_user_follows.each do |channel| %>
       <h3><%= link_to channel.name, channel_path(channel) %></h3>
-       <% channel.posts.find(:all, :order => "id desc", :limit => 1).each do |post| %>
+       <% channel.posts.last(2).reverse.each do |post| %>
           <h3><%= post.img_url %></h3>
       <% end %>
     <% end %>

@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def store_location
+    @title = "Biblio"
     session[:previous_url] = request.fullpath unless request.fullpath =~ /\/my|\/login|\/logout/ 
   end
 
