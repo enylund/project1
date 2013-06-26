@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   end
 
   def create_array_of_followed_channels_to_show
-    user_follows = FollowChannel.find_all_by_user_id(params[:id])
+    user_follows = FollowChannel.find_all_by_user_id(@user.id)
     the_channels = Array.new
     user_follows.each do |row|
       the_channels << row[:channel_id]
