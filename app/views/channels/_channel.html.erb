@@ -15,6 +15,6 @@
 <% if user_signed_in? && @postable %>
   <%= render 'posts/form' %>
 <% else %>
-  <%= link_to "Sign in", new_user_session_path %> to add a post!
+  This channel is closed.
 <% end %>
 </div>

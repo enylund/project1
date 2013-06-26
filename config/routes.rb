@@ -9,7 +9,7 @@ BiblioApp::Application.routes.draw do
 
   resources :posts
 
-  match "/users/:id" => "users#show", :via => :get, :as => :user
+  get "/users/:username" => "users#show", :as => :user
   # resources :users
   # map.user '/:username', :controller => 'users', :action => 'show'
 
