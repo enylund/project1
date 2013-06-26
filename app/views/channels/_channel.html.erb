@@ -10,7 +10,7 @@
 
   <p />
   <div class="posts">
-  	<%= render channel.posts %>
+  	<%= render channel.posts.order("created_at DESC") %>
   </div>
 <% if user_signed_in? && @postable %>
   <%= render 'posts/form' %>
