@@ -1,5 +1,6 @@
 <div class="post">
   <div class="post-imgurl">URL: <%= post.img_url %></div>
+  <%= image_tag post.postimage.url %>
   <div class="post-caption">CAPTION: <%= link_to post.caption, post %></div>
   <div class="post-channel">Channel ID: <%= link_to post.channel.name, post.channel %></div>
   <div class="poster">POSTER IS: <%= post.user.username %>

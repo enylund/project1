@@ -1,7 +1,7 @@
 <div class="new-post">
   MAKE NEW POST:
-
-  <%= form_for Post.new do |f| %>
+  <% @post = Post.new %>
+  <%= form_for(@post, :url => posts_path, :html => { :multipart => true }) do |f| %>
 
     <div class="field">
       <%= f.label :img_url %><br>
@@ -10,6 +10,9 @@
     <div class="field">
       <%= f.label :caption %><br>
       <%= f.text_field :caption %>
+    </div>
+    <div class="field">
+      <%= f.file_field :postimage %>
     </div>
     <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :channel_id, value: @channel.id %>

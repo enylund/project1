@@ -20,6 +20,7 @@ gem 'therubyracer', platforms: :ruby
 
 gem 'devise', '3.0.0.rc'
 
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
