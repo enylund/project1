@@ -70,6 +70,9 @@ class ChannelsController < ApplicationController
   # DELETE /channels/1
   # DELETE /channels/1.json
   def destroy
+
+    FollowChannel.where(:channel_id => params[:id]).destroy_all
+
     @channel.destroy
     respond_to do |format|
       format.html { redirect_to user_path(current_user.id) }
