@@ -12,7 +12,7 @@
   <div class="posts">
   	<%= render channel.posts %>
   </div>
-<% if user_signed_in? && @postable == true %>
+<% if user_signed_in? && @postable %>
   <%= render 'posts/form' %>
 <% else %>
   <%= link_to "Sign in", new_user_session_path %> to add a post!

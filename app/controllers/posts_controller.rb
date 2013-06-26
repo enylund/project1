@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :post_privacy
 
   # GET /posts
   # GET /posts.json
@@ -71,5 +72,16 @@ class PostsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
       params.require(:post).permit(:img_url, :caption, :user_id, :channel_id, :postimage)
+    end
+
+    def post_privacy
+      @post = Post.find(params[:id])
+      chan_privacy = @post.channel.privacy
+      if chan_privacy == 'private' && (current_user != @post.channel.user)
+        @privacy = true
+        redirect_to root_path
+      else 
+        @privacy = false
+      end
     end
 end
