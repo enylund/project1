@@ -1,17 +1,17 @@
 <br /><br />
-<h1><%= (user_signed_in? && current_user.id == @user.id) ? "Your":@user.username+"'s" %> page</h1>
+<h1><%= (user_signed_in? && current_user == @user) ? "Your":@user.username+"'s" %> page</h1>
 <br /><br />
-<h2>Activity on <%= (user_signed_in? && current_user.id == @user.id) ? 'channels you created' : @user.username + "'s channels" %>  :</h2>
+<h2>Activity on <%= (user_signed_in? && current_user == @user) ? 'channels you created' : @user.username + "'s channels" %>  :</h2>
     <% @channels_to_show.each do |channel| %>
-        <h3><%= link_to channel.name, channel_path(channel.id.to_i) %></h3>
+        <h3><%= link_to channel.name, channel_path(channel) %></h3>
       <% channel.posts.find(:all, :order => "id desc", :limit => 1).each do |post| %>
         <h3><%= post.img_url %></h3>
       <% end %>
     <% end %>
     <br /><br />
-    <h2>Activity on channels <%= (user_signed_in? && current_user.id == @user.id) ? 'you follow' : @user.username + " follows" %>:</h2>
+    <h2>Activity on channels <%= (user_signed_in? && current_user == @user) ? 'you follow' : @user.username + " follows" %>:</h2>
     <% @array_of_channels_a_user_follows.each do |channel| %>
-      <h3><%= link_to channel.name, channel_path(channel.id.to_i) %></h3>
+      <h3><%= link_to channel.name, channel_path(channel) %></h3>
        <% channel.posts.find(:all, :order => "id desc", :limit => 1).each do |post| %>
           <h3><%= post.img_url %></h3>
       <% end %>

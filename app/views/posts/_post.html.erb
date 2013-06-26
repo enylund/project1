@@ -4,7 +4,7 @@
   <div class="post-caption">CAPTION: <%= link_to post.caption, post %></div>
   <div class="post-channel">Channel ID: <%= link_to post.channel.name, post.channel %></div>
   <div class="poster">POSTER IS: <%= link_to post.user.username, post.user %>
-  <% if user_signed_in? && current_user.id == post.user.id %>
+  <% if user_signed_in? && current_user == post.user %>
     <div class="post-delete-link"><%= link_to("Delete", post, :method => 'delete') %></div>
   <%end%>
 <div>----------END OF POST-----------</div>

@@ -75,7 +75,7 @@ class ChannelsController < ApplicationController
 
     @channel.destroy
     respond_to do |format|
-      format.html { redirect_to user_path(current_user.id) }
+      format.html { redirect_to user_path(current_user) }
       format.json { head :no_content }
     end
   end
@@ -99,12 +99,12 @@ class ChannelsController < ApplicationController
 
     def privacy_check
       @channel = Channel.find(params[:id])
-      @privacy = @channel.privacy
+      privacy = @channel.privacy
       @postable = true
-      if @privacy == 'private' && (current_user != @channel.user)
+      if privacy == 'private' && (current_user != @channel.user)
         flash[:notice] = "This is a private channel. If you created this channel, please log in to view."
         redirect_to root_path
-      elsif @privacy == 'closed' && (current_user != @channel.user)
+      elsif privacy == 'closed' && (current_user != @channel.user)
         @postable = false
       end
     end

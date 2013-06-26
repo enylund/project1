@@ -9,9 +9,11 @@ class UsersController < ApplicationController
   end
 
   def private_channel_show_check
-    if current_user != @user.id
+    if current_user != @user
       @channels_to_show = @user.channels.where('privacy != ?', 'private').all
       # raise @channels_to_show.to_yaml
+    else
+      @channels_to_show = @user.channels.all
     end
   end
 
