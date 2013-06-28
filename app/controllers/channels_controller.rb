@@ -39,6 +39,8 @@ class ChannelsController < ApplicationController
   # POST /channels.json
   def create
     @channel = Channel.new(channel_params)
+    @channel.user = current_user
+    @channel.save
 
     respond_to do |format|
       if @channel.save
@@ -98,7 +100,7 @@ class ChannelsController < ApplicationController
     def privacy_check
       privacy = @channel.privacy
       @postable = true
-      if privacy == 'private' && (current_user != @channel.user)
+      if !@channel.visible_to?(current_user)
         flash[:notice] = "This is a private channel. If you created this channel, please log in to view."
         redirect_to root_path
       elsif privacy == 'closed' && (current_user != @channel.user)
@@ -109,6 +111,6 @@ class ChannelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def channel_params
-      params.require(:channel).permit(:name, :description, :user_id, :privacy)
+      params.require(:channel).permit(:name, :description, :privacy)
     end
 end

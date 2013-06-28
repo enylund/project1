@@ -15,7 +15,6 @@
       <%= f.radio_button :privacy, 'closed' %><%= f.label 'Closed' %>
       <%= f.radio_button :privacy, 'private' %><%= f.label 'Private' %>
     </div>
-    <%= f.hidden_field :user_id, value: current_user.id %>
     <div class="actions">
       <%= f.submit %>
     </div>

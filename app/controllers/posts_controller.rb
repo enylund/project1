@@ -26,9 +26,16 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.create(post_params)
-    @post.user = current_user
-    @post.save
+    @channel = Channel.find(params[:post][:channel_id])
+    if @channel.visible_to?(current_user)
+      @post = Post.create(post_params)
+      @post.user = current_user
+      @post.save
+      redirect_to @post.channel
+    else
+      redirect_to :root, notice: "Stop it yo"
+    end
+  end
 
     # respond_to do |format|
     #   if @post.save
@@ -39,8 +46,6 @@ class PostsController < ApplicationController
     #     format.json { render json: @post.errors, status: :unprocessable_entity }
     #   end
     # end
-    redirect_to @post.channel
-  end
 
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
