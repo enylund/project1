@@ -11,7 +11,8 @@ class ChannelsController < ApplicationController
   # GET /channels/1.json
   def show
   @title = @channel.user.username + "'s " + @channel.name + " channel"
-  followers_count =  FollowChannel.count(:conditions => { :channel_id => params[:id] })
+  # followers_count =  FollowChannel.count(:conditions => { :channel_id => params[:id] })
+  followers_count =  FollowChannel.where(channel_id: params[:id]).count
   @add_followers_to_view = false
   unless followers_count < 1
     array_of_channel_followers()
@@ -79,7 +80,7 @@ class ChannelsController < ApplicationController
 
   def array_of_channel_followers
     follow_rows = []
-    follow_rows = FollowChannel.where(:channel_id => params[:id]).all
+    follow_rows = FollowChannel.where(:channel_id => params[:id])
     followers_user_ids = []
     follow_rows.each do |row|
       followers_user_ids << row.user_id

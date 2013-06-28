@@ -1,7 +1,7 @@
 <br /><br />
-<h1><%= (user_signed_in? && current_user == @user) ? "Your":@user.username+"'s" %> page</h1>
+<h1><%= who1 %> page</h1>
 <br /><br />
-<h2>Activity on <%= (user_signed_in? && current_user == @user) ? 'channels you created' : @user.username + "'s channels" %>  :</h2>
+<h2>Activity on <%= who2 %>  :</h2>
     <% @channels_to_show.each do |channel| %>
         <h3><%= link_to channel.name, channel_path(channel) %></h3>
       <% channel.posts.last(2).reverse.each do |post| %>
@@ -10,7 +10,7 @@
       <% end %>
     <% end %>
     <br /><br />
-    <h2>Activity on channels <%= (user_signed_in? && current_user == @user) ? 'you follow' : @user.username + " follows" %>:</h2>
+    <h2>Activity on channels <%= who3 %>:</h2>
     <% @array_of_channels_a_user_follows.each do |channel| %>
       <h3><%= link_to channel.name, channel_path(channel) %></h3>
        <% channel.posts.last(2).reverse.each do |post| %>
