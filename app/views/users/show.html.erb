@@ -6,6 +6,7 @@
         <h3><%= link_to channel.name, channel_path(channel) %></h3>
       <% channel.posts.last(2).reverse.each do |post| %>
         <h3><%= post.img_url %></h3>
+        <h3><%= image_tag post.postimage.url %></h3>
       <% end %>
     <% end %>
     <br /><br />
@@ -14,6 +15,7 @@
       <h3><%= link_to channel.name, channel_path(channel) %></h3>
        <% channel.posts.last(2).reverse.each do |post| %>
           <h3><%= post.img_url %></h3>
+          <h3><%= image_tag post.postimage.url %></h3>
       <% end %>
     <% end %>
     <br /><br />
