@@ -14,7 +14,6 @@
     <div class="field">
       <%= f.file_field :postimage %>
     </div>
-    <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :channel_id, value: @channel.id %>
     <div class="actions">
       <%= f.submit %>

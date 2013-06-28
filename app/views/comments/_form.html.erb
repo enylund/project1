@@ -7,7 +7,6 @@
       <%= f.label :content %><br>
       <%= f.text_field :content %>
     </div>
-    <%= f.hidden_field :user_id, value: current_user.id %>
     <%= f.hidden_field :post_id, value: @post.id %>
     <div class="actions">
       <%= f.submit %>
