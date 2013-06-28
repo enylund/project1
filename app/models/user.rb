@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
-  has_many :channels
-  has_many :posts
-  has_many :comments
+  has_many :channels, dependent: :destroy
+  has_many :posts, dependent: :destroy
+  has_many :comments, dependent: :destroy
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
