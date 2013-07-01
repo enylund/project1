@@ -1,0 +1,16 @@
+<div>List of collaborators:
+  <% @collaborators.each do |collab| %>
+    <div><%= collab.user.username %></div>
+  <% end %>
+</div>
+<br />
+<div>Add collaborators:</div>
+<%= form_for Collaboration.new do |f| %>
+
+  <%= f.label :Collaborator %><br>
+  <%= f.text_field :user_id %>
+
+  <%= f.hidden_field :channel_id, value: @channel.id %>
+  <%= f.submit "Add this collaborator" %>
+<% end %>
+<p />

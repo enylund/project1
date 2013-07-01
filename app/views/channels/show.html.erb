@@ -1,22 +1,28 @@
 <% if user_signed_in? %>
+
   <% if @allowed_to_follow == true && @test.blank? == true %>
     <%= render 'follow_channels/follow' %>
   <% elsif @allowed_to_follow == true && @test.blank? == false %>
     <%= render 'follow_channels/unfollow' %>
-  <%else%>
+  <% else %>
     <h3>You created this channel</h3>
   <% end %>
-<% end %>
-<%if user_signed_in? && current_user == @channel.user %>
+
+  <% if current_user == @channel.user %>
     <%= render 'destroychannel' %>
-<%end%>
+    <p />
+    <%= render 'collab' %>
+  <% end %>
+
+<% end %>
+
 <%= render @channel %>
 
 <br /><br />
 <% if @add_followers_to_view %>
   <h2>List of channel followers</h2>
-<% @array_of_channel_followers.each do |row| %>
-  <h3><%= link_to row.username, user_path(row) %></h3>
-<% end %>
+  <% @chan_fols.each do |row| %>
+    <h3><%= link_to row.user.username, user_path(row.user) %></h3>
+  <% end %>
 <% end %>
 
