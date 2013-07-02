@@ -1,9 +1,14 @@
 <div>List of collaborators:
   <% @collaborators.each do |collab| %>
-    <div><%= collab.user.username %></div>
+    <div><%= collab.user.username %>
+      <%= link_to 'delete', collab, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
   <% end %>
+
 </div>
+
 <br />
+
 <div>Add collaborators:</div>
 <%= form_for Collaboration.new do |f| %>
 
