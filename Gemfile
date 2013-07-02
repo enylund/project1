@@ -23,7 +23,7 @@ gem 'devise', '3.0.0.rc'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-
+gem 'jquery-ui-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 

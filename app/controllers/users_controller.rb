@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.order(:username).where("username like ?", "%#{params[:term]}%")
+    render json: @users.map(&:username)
+  end
+
   def show
     @user = User.find_by_username(params[:username])
     # @user = User.where(username: params[:username]).take
@@ -27,5 +32,8 @@ class UsersController < ApplicationController
     @array_of_channels_a_user_follows = Channel.find(the_channels)
   end
 
+  def search
+    redirect_to user_path(params[:q])
+  end
 
 end
