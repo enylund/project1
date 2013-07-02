@@ -2,6 +2,8 @@ BiblioApp::Application.routes.draw do
   devise_for :users, :path_prefix => 'my', :skip => [:sessions]
   post "follow_channels/create"
   delete "follow_channels/destroy"
+  get "users/index"
+  get "users/search"
   resources :collaborations
 
   resources :channels

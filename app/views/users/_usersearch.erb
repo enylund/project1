@@ -1,0 +1,5 @@
+<%= form_tag( "/users/search", method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag :q, nil, data: { autocomplete_source: users_index_path} %>
+  <%= submit_tag("Search") %>
+<% end %>
