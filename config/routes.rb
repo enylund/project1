@@ -4,6 +4,8 @@ BiblioApp::Application.routes.draw do
   delete "follow_channels/destroy"
   get "users/index"
   get "users/search"
+  resources :collaborations
+
   resources :channels
 
   resources :comments

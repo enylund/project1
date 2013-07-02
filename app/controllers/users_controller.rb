@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @title = @user.username + "'s biblio"
     private_channel_show_check()
     create_array_of_followed_channels_to_show()
+    # raise "@user.channels".to_yaml
 
   end
 

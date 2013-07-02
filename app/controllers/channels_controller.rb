@@ -13,9 +13,10 @@ class ChannelsController < ApplicationController
   @title = @channel.user.username + "'s " + @channel.name + " channel"
   # followers_count =  FollowChannel.count(:conditions => { :channel_id => params[:id] })
   followers_count =  FollowChannel.where(channel_id: params[:id]).count
+  @collaborators = @channel.collaborations
   @add_followers_to_view = false
   unless followers_count < 1
-    array_of_channel_followers()
+    @chan_fols = FollowChannel.where(channel_id: @channel.id)
     @add_followers_to_view = true
   end
     if user_signed_in?
@@ -78,17 +79,6 @@ class ChannelsController < ApplicationController
       format.html { redirect_to user_path(current_user) }
       format.json { head :no_content }
     end
-  end
-
-  def array_of_channel_followers
-    follow_rows = []
-    follow_rows = FollowChannel.where(:channel_id => params[:id])
-    followers_user_ids = []
-    follow_rows.each do |row|
-      followers_user_ids << row.user_id
-    end
-    @array_of_channel_followers = User.find(followers_user_ids)
-    # raise @array_of_channel_followers.to_yaml
   end
 
   private

@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
-  has_many :channels, dependent: :destroy
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :collaborations
+  has_many :channels, :through => :collaborations
+  has_many :channels, dependent: :destroy
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
