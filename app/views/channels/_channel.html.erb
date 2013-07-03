@@ -1,5 +1,25 @@
+<% if user_signed_in? %>
+  <% if current_user == @channel.user %>
+    <div id="destroy-button"><%= render 'destroychannel' %></div>
+    <p />
+    <%= render 'collab' %>
+  <% end %>
+
+<% end %>
+
+
 <div class="channel">
-  <div class="channel-name">CHANNEL NAME: <%= link_to channel.name, channel %></div>
+  <div id="channel-name">
+    <% if user_signed_in? %> 
+        <% if @allowed_to_follow == true && @test.blank? == true %>
+          <%= render 'follow_channels/follow' %>
+        <% elsif @allowed_to_follow == true && @test.blank? == false %>
+          <%= render 'follow_channels/unfollow' %>
+        <% else %>
+          <h3>You created this channel</h3>
+        <% end %>
+    <%end%>
+    <%=channel.name%><span id="expand-symbol"> &#11031;</span> </div>
   <div class="channel-privacyi">This channel is: <%= channel.privacy %></div>
   <% if user_signed_in? && current_user == @channel.user %>
     <%= render 'privacyform' %>

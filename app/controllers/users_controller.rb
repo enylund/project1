@@ -11,7 +11,6 @@ class UsersController < ApplicationController
     @title = @user.username + "'s biblio"
     private_channel_show_check()
     create_array_of_followed_channels_to_show()
-    # raise "@user.channels".to_yaml
 
   end
 
@@ -34,7 +33,12 @@ class UsersController < ApplicationController
   end
 
   def search
-    redirect_to user_path(params[:q])
+    user = User.find_by_username(params[:q])
+    if user.blank?
+      redirect_to :back
+    else
+      redirect_to user_path(params[:q])
+    end
   end
 
 end

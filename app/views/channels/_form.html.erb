@@ -1,22 +1,14 @@
-<div class="new-channel">
-  Add a new channel:
-  <%= form_for Channel.new do |f| %>
-
-    <div class="field">
-      <%= f.label :name %><br>
-      <%= f.text_field :name %>
+<%= form_for Channel.new do |f| %>
+  <ul id='add-channel-list-left'>
+  <li><%= f.text_field :name, :placeholder => "Name" %></li>
+  <li><%= f.text_field :description, :placeholder => "Description" %></li>
+  </ul>
+    <div class="radio">Privacy:
+      <%= f.radio_button :privacy, 'open', :checked => true %><%= f.label 'Open', for: 'channel_privacy_open' %>
+      <%= f.radio_button :privacy, 'closed' %><%= f.label 'Closed', for: 'channel_privacy_closed' %>
+      <%= f.radio_button :privacy, 'private' %><%= f.label 'Private', for: 'channel_privacy_private' %>
     </div>
-    <div class="field">
-      <%= f.label :description %><br>
-      <%= f.text_field :description %>
-    </div>
-    <div class="field">
-      <%= f.radio_button :privacy, 'open', :checked => true %><%= f.label 'Open' %>
-      <%= f.radio_button :privacy, 'closed' %><%= f.label 'Closed' %>
-      <%= f.radio_button :privacy, 'private' %><%= f.label 'Private' %>
-    </div>
-    <div class="actions">
-      <%= f.submit %>
+    <div id="add-channel-list-right">
+      <%= f.submit "Add", :class => "channel-create-button" %>
     </div>
   <% end %>
-</div>

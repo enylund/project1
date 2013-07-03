@@ -13,7 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.autocomplete
+//= require jquery.ui.all
 //= require turbolinks
 //= require_tree .
 //= require jquery.tokeninput
 
+
+$(document).ready( function() {
+  $("#application-search-nav").hide();
+   $("#application-channel-add").click(function () {
+      $("#application-search-nav").slideToggle("fast");
+   });
+
+
+});

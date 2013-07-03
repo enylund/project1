@@ -7,20 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="user_nav">
-  	<% if user_signed_in? %>
-  	  Signed in as <%= link_to current_user.username, current_user %> with email: <%= link_to current_user.email, edit_user_registration_path %>. Not you?
-  	  <%= link_to "Sign out", destroy_user_session_path %>
-  	<% else %>
-  	  <%= link_to "Sign in", new_user_session_path %> or 
-  	  <%= link_to "sign up", new_user_registration_path %>
-      <div><%= render 'devise/sessions/form' %></div>
-  	<% end %>
-<% flash.each do |name, msg| %>		
-	<%= content_tag :div, msg, :id => "flash_#{name}"%>
-<% end %>
-<%= render "users/usersearch" %>
-<%= yield %>
+<nav id="application-nav">
+  <ul id="application-nav-list-left">
+    <li id="application-search-nav-button"><span class="underline-hover">Search</span></li>
+    <li id="application-channel-add" class='border-maker'><span class="underline-hover">Add Channel</span></li>
+  </ul>
+  <div id="application-nav-logotype">
+    BIBLIOGRAPHY
+  </div>
+  <ul id="application-nav-list-right">
+  	 <% if user_signed_in? %>
+       <li><%= link_to "Me", current_user, :class => "nav-user"%></li>
+       <li class="border-maker"><%= link_to "Logout", destroy_user_session_path , :class => "nav-user"%></li>
+  	 <% else %>
+       <%= link_to "Sign in", new_user_session_path %> or 
+  	    <%= link_to "sign up", new_user_registration_path %>
+        <div><%= render 'devise/sessions/form' %></div>
+  	 <% end %>
+     <% flash.each do |name, msg| %>		
+	      <%= content_tag :div, msg, :id => "flash_#{name}"%>
+     <% end %>
+  </ul>
+</nav>
+<section id="application-search-nav">
+   <%= render "channels/form" %>
+</section>
+
+   <%= render "users/usersearch" %>
+
+
+   <%= yield %>
 
 </body>
 </html>

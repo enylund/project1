@@ -2,5 +2,5 @@
 <%= form_for @follow_channel, :url => follow_channels_destroy_path, :html => { :method => "delete" } do |f| %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <%= f.hidden_field :channel_id, :value => @channel.id.to_i %>
-  <%= f.submit "Unfollow" %>
+  <%= f.submit "-", :id => "follower-submit-button" %>
 <% end %>

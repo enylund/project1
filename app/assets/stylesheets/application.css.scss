@@ -1,0 +1,228 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require token-input-facebook
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline; background: transparent;
+}
+
+*:focus {outline: 0;}
+
+@font-face {
+  font-family: 'nobel-boldbold';
+  src: asset-url("nobel-bold-webfont.eot", font);
+  src: asset-url("nobel-bold-webfont.eot?#iefix", font) format('embedded-opentype'),
+       asset-url("nobel-bold-webfont.woff", font) format('woff'),
+       asset-url("nobel-bold-webfont.ttf", font) format('truetype'),
+       asset-url("nobel-bold-webfont.svg#nobel-boldbold", font) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+a.nav-user:link {color:white; text-decoration:none;}/* unvisited link */
+a.nav-user:visited {color:white;}  /* visited link */
+a.nav-user:hover {color:white; border-bottom: solid white 1px;}  /* mouse over link */
+a.nav-user:active {color:white;}  /* selected link */
+
+#application-nav-logotype {
+  font-family: 'nobel-boldbold';
+  letter-spacing: 1px;
+  color:white;
+  text-align:center;
+  margin-top:15px;
+  width:110px;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul#application-nav-list-right {
+  font-family: 'nobel-boldbold';
+  float:right;
+  position:relative;
+  top:-34px;
+  list-style-type:none;
+  margin:15px 30px 0px 0px;
+  padding:0;
+}
+
+#application-nav-list-right li {
+  display: inline;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+ul#application-nav-list-left {
+  font-family: 'nobel-boldbold';
+  color:white;
+  position:relative;
+  top: 2px;
+  float:left;
+  list-style-type:none;
+  margin:15px 0px 0px 30px;
+  padding:0;
+}
+
+#application-nav-list-left li {
+  display: inline;
+  padding-left:15px;
+  padding-right:15px;
+}
+
+.border-maker {
+  border-left: solid white 2px;
+}
+
+#application-nav {
+  position: fixed;
+  top:0px;
+  left:0px;
+  right:0px;
+
+  height:50px;
+  background-color:black;
+  color:white;
+}
+
+#application-search-nav{
+  position: fixed;
+  top:50px;
+  left:0px;
+  right:0px;
+
+  height:80px;
+  background-color:#fcee21;
+  color:white;
+
+  display:none;
+  opacity:0.9;
+  z-index:100;
+}
+
+#application-search-nav-button, #application-channel-add {
+  cursor: hand;
+  cursor: pointer;
+}
+
+.underline-hover:hover {
+  border-bottom: solid white 1px;
+}
+
+ul#add-channel-list-left {
+  font-family: 'nobel-boldbold';
+  color:white;
+  position:relative;
+  top: -22px;
+  float:left;
+  list-style-type:none;
+  margin:10px 0px 0px 30px;
+  padding:0;
+}
+
+#add-channel-list-left li {
+  display: inline;
+  padding-left:5px;
+  padding-right:5px;
+}
+
+#add-channel-list-right {
+  font-family: 'nobel-boldbold';
+  float:right;
+  position:relative;
+  top:-64px;
+  list-style-type:none;
+  margin:0px 30px 0px 0px;
+  padding:0;
+}
+
+
+input[type=text] {
+   border: 2px solid black;
+   padding: 10px;
+   background: #fcee21;
+   font-family: 'nobel-boldbold';
+}
+
+.channel-create-button {
+  font-family: 'nobel-boldbold';
+  padding:10px 20px;
+  background-color:#fcee21;
+  border: 2px solid black;
+  color:black;
+  text-decoration:none;
+}
+
+.channel-create-button:hover {
+  background:black;
+  color:#fcee21;
+}
+
+
+.radio {
+  text-align:center;
+  width:350px;
+  height:50px;
+  margin-top:30px;
+  color:black;
+  font-family: 'nobel-boldbold';
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.radio input[type=radio] {
+  display:none;
+}
+
+.radio label {
+  border: solid 2px black;
+  padding: 8px 16px;
+  margin-right: 10px;
+  background: #fcee21;
+  cursor: pointer;
+}
+
+.radio input:checked+label {
+  border: solid 1px black;
+  background: black;
+  color:#fcee21;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: black;
+}
+
+:-ms-input-placeholder {  
+   color: black;
+}
+
+
+
+
+
+
+
+
+
+
