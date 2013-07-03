@@ -1,8 +1,13 @@
 class UsersController < ApplicationController
 
   def index
-    @users = User.order(:username).where("username like ?", "%#{params[:term]}%")
-    render json: @users.map(&:username)
+    # @users = User.order(:username).where("username like ?", "%#{params[:term]}%")
+    # render json: @users.map(&:username)
+    @users = User.where("username like ?", "%#{params[:q]}%")
+    respond_to do |format|
+      format.html
+      format.json { render :json => @users }
+    end
   end
 
   def show
