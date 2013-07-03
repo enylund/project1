@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:comment][:post_id])
-    if @post.visible_to?(current_user)
+    if @post.visible_to?(current_user) || Collaboration.where(channel: @post.channel, user: current_user).present?
       @comment = Comment.new(comment_params)
       @comment.user = current_user
       @comment.save

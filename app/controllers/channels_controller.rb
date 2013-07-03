@@ -90,8 +90,15 @@ class ChannelsController < ApplicationController
     def privacy_check
       privacy = @channel.privacy
       @postable = true
-      if !@channel.visible_to?(current_user)
-        flash[:notice] = "This is a private channel. If you created this channel, please log in to view."
+
+      if Collaboration.where(channel: @channel, user: current_user).blank?
+        a_collab = false
+      else
+        a_collab = true
+      end
+
+      if !@channel.visible_to?(current_user) && !a_collab
+        flash[:notice] = "This is a private channel. If you have permission, please log in to view."
         redirect_to root_path
       elsif privacy == 'closed' && (current_user != @channel.user)
         @closed = true
@@ -101,6 +108,6 @@ class ChannelsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def channel_params
-      params.require(:channel).permit(:name, :description, :privacy)
+      params.require(:channel).permit(:name, :description, :privacy, :user_tokens)
     end
 end

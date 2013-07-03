@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @channel = Channel.find(params[:post][:channel_id])
-    if @channel.visible_to?(current_user)
+    if @channel.visible_to?(current_user) || Collaboration.where(channel: @channel, user: current_user).present?
       @post = Post.create(post_params)
       @post.user = current_user
       @post.save
@@ -83,6 +83,6 @@ class PostsController < ApplicationController
     end
 
     def check_privacy
-      redirect_to :root and return unless @post.visible_to?(current_user)
+      redirect_to :root and return unless @post.visible_to?(current_user) || Collaboration.where(channel: @post.channel, user: current_user).present?
     end
 end

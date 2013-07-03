@@ -10,10 +10,12 @@
 <br />
 
 <div>Add collaborators:</div>
-<%= form_for Collaboration.new do |f| %>
+<%= form_for(@channel) do |f| %>
 
-  <%= f.label :Collaborator %><br>
-  <%= f.text_field :user_id %>
+   <div>
+    <%= f.label :user_tokens, "Collaborators" %>
+    <%= f.text_field :user_tokens, "data-load" => @channel.users.map(&:attributes).to_json %>
+  </div>
 
   <%= f.hidden_field :channel_id, value: @channel.id %>
   <%= f.submit "Add this collaborator" %>
