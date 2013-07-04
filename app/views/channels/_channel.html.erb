@@ -6,7 +6,7 @@
         <% elsif @allowed_to_follow == true && @test.blank? == false %>
           <%= render 'follow_channels/unfollow' %>
         <% else %>
-          <div id="you-created-message">(you're bibliography)</div>
+          <div id="you-created-message">(your bibliography)</div>
         <% end %>
     <%end%>
     <%=channel.name%><span id="expand-symbol"> &#11031;</span> </div>
@@ -15,27 +15,40 @@
 <% if user_signed_in? %>
   <% if current_user == @channel.user %>
     <div id="destroy-button"><%= render 'destroychannel' %></div>
-    <p />
     <%= render 'collab' %>
   <% end %>
-
 <% end %>
 
-
-
-
-  <div class="channel-privacyi">This channel is: <%= channel.privacy %></div>
-  <% if user_signed_in? && current_user == @channel.user %>
-    <%= render 'privacyform' %>
-  <% end %>
-  <div class="channel-author">MADE BY: 
-    <%= link_to channel.user.username, channel.user %></div>
-  <div class="channel-description">DESCRIPTION: <%= channel.description %></div>
-
-  <p />
-  <div class="posts">
-  	<%= render channel.posts.order("created_at DESC") %>
+<section id="channel-info-hide">
+  <div id="channel-info-column-1">
+     <% if @add_followers_to_view %>
+        <span class="channel-info-headline">Followers</span>
+        <% @chan_fols.each do |row| %>
+          <p><%= link_to row.user.username, user_path(row.user) %></p>
+         <% end %>
+       <% end %>
+     <div class="channel-privacy">
+       <span class="channel-info-headline">Status</span>
+       <p><%= channel.privacy %></p>
+     </div>
   </div>
+  <div id="channel-info-column-2">
+     <div class="channel-description">
+       <span class="channel-info-headline">About</span>
+       <p><%= channel.description %></p>
+     </div>
+     <div class="channel-author">
+       <span class="channel-info-headline">Researched by</span>
+       <p><%= link_to channel.user.username, channel.user %></p>
+     </div>
+  </div>
+</section>
+
+<section id="all-channel-posts">
+  	<%= render channel.posts.order("created_at DESC") %>
+</section>
+
+<section id="create-new-post-form">
 <% if user_signed_in? && @postable %>
   <%= render 'posts/form' %>
 <% elsif @closed %>
@@ -43,4 +56,4 @@
 <% elsif !user_signed_in? && !@closed %>
   <%= link_to "Sign in", new_user_session_path %> to post!
 <% end %>
-</div>
+</section>

@@ -1,13 +1,17 @@
-<div class="post">
-  <div class="post-imgurl">URL: <%= post.img_url %></div>
+<section id="post-body">
+  <div class="post-imgurl">
+    <%= post.img_url %>
+  </div>
   <%= image_tag post.postimage.url %>
-  <div class="post-caption">CAPTION: <%= link_to post.caption, post %></div>
-  <div class="post-channel">Channel ID: <%= link_to post.channel.name, post.channel %></div>
-  <div class="poster">POSTER IS: <%= link_to post.user.username, post.user %>
-  <% if user_signed_in? && current_user == post.user %>
-    <div class="post-delete-link"><%= link_to("Delete", post, :method => 'delete') %></div>
+  <div class="post-caption">
+    <%= link_to post.caption, post %>
+  </div>
+  <div class="poster">
+    POSTER IS: <%= link_to post.user.username, post.user %>
+  </div>
+    <% if user_signed_in? && current_user == post.user %>
+  <div class="post-delete-link">
+    <%= link_to("Delete", post, :method => 'delete') %>
+  </div>
   <%end%>
-<div>----------END OF POST-----------</div>
-
-
-</div>
+</section>

@@ -52,14 +52,39 @@
   top: -20px;
 }
 
+#channel-info-hide {
+  font-family: 'nobel-boldbold';
+  width: 87%;
+  padding: 10px 10px 25px 10px;
+  border-bottom: solid black 2px;
+  margin: 0px auto;
+  height:auto;
+  overflow:hidden;
+  text-align:center;
+  p {
+      font-size: 18px;
+      font-family: 'nobel-boldbold';
+}
+}
 
+#channel-info-column-1 {
+  width:48%;
+  float:left;
+}
 
+#channel-info-column-2 {
+  width: 48%;
+  float:right;
+}
 
-
-
-
-
-
+.channel-info-headline {
+  display:block;
+  margin-top:15px;
+  margin-bottom: 5px;
+  text-transform:uppercase;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
 
 
 

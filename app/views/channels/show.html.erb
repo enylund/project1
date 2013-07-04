@@ -14,12 +14,3 @@
   <% end %>
 
 <% end %>
-
-<br /><br />
-<% if @add_followers_to_view %>
-  <h2>List of channel followers</h2>
-  <% @chan_fols.each do |row| %>
-    <h3><%= link_to row.user.username, user_path(row.user) %></h3>
-  <% end %>
-<% end %>
-
