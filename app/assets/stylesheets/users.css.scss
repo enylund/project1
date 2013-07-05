@@ -25,3 +25,69 @@ ul.ui-autocomplete {
       }
         }
 }
+
+
+#whose-page {
+  width:87%;
+  margin: 50px auto 0px auto;
+
+  font-family: 'nobel-boldbold';
+  color:black;
+  text-align: center;
+  font-size: 50px;
+}
+
+.set-of-six {
+  width:87%;
+  margin: 0px auto;
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+.individual-image {
+  float:left;
+  width: 32%;
+  height: 195px;
+  text-align:center;
+  margin: 2% 0.5%;
+}
+
+.individual-image img {
+  height: 100%;
+  max-width: 100%;
+}
+
+.individual-text {
+  float:left;
+  width: 32%;
+  height: 195px;
+  text-align:center;
+  margin: 2% 0.5%;
+
+  display: table;
+}
+
+.text-vert-center {
+  display: table-cell;
+  vertical-align: middle;
+
+  font-family:'nobel-boldbold';
+  color:black;
+  font-size: 30px;
+}
+
+
+.text-vert-center a:link {text-decoration:none; color:black; border-bottom: 2px solid black;}
+.text-vert-center a:visited {text-decoration:none; color:black;}
+.text-vert-center a:hover { text-decoration:none; color:black;}
+.text-vert-center a:active {text-decoration:none; color:black;}
+
+
+
+
+
+
+
+
+
+
