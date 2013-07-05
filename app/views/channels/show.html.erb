@@ -1,14 +1,6 @@
 <%= render @channel %>
 <% if user_signed_in? %>
 
-  <% if @allowed_to_follow == true && @test.blank? == true %>
-    <%= render 'follow_channels/follow' %>
-  <% elsif @allowed_to_follow == true && @test.blank? == false %>
-    <%= render 'follow_channels/unfollow' %>
-  <% else %>
-    <h3>You created this channel</h3>
-  <% end %>
-
   <% if current_user == @channel.user %>
     <%= render 'destroychannel' %>
   <% end %>
