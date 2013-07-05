@@ -18,8 +18,7 @@
 //= require_tree .
 //= require jquery.tokeninput
 
-
-$(document).ready( function() {
+var ready = (function () {
   $("#application-search-nav").hide();
    $("#application-channel-add").click(function () {
       $("#application-search-nav").slideToggle("fast");
@@ -31,9 +30,7 @@ $(document).ready( function() {
 
     var userInfo = $(window).height();
 
-
     var posit = $(window).scrollTop();
-    console.log(posit);
 
     if (posit > userInfo) {
       $('#jump-symbol').fadeIn();
@@ -45,8 +42,7 @@ $(document).ready( function() {
   $('#jump-symbol').on('click', function() {
     $("body").animate({scrollTop:0}, "slow");
   });
-
-
-
-
 });
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

@@ -1,4 +1,4 @@
-$(document).ready( function () {
+var ready = ( function () {
 
 $('#expand-symbol').on('click', function() {
 
@@ -12,3 +12,6 @@ $('#expand-symbol').on('click', function() {
 
   });
 });
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

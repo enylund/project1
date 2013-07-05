@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-jQuery ->
+ready = ->
   $('#channel_user_tokens').tokenInput '/users/index.json',
     theme: 'facebook',
     propertyToSearch: "username",
@@ -11,3 +11,6 @@ jQuery ->
       return "<li>" + item.username + "</li>"
     tokenFormatter: (item) ->
       return "<li>" + item.username + "</li>"
+
+$(document).ready(ready)
+$(document).on('page:load', ready)

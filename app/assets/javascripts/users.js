@@ -1,4 +1,4 @@
-$(document).ready( function() {
+var ready = ( function() {
 
     $("#q").autocomplete({
       source: $('#q').data('autocomplete-source'),
@@ -9,3 +9,6 @@ $(document).ready( function() {
     });
 
 });
+
+$(document).ready(ready);
+$(document).on('page:load', ready);
