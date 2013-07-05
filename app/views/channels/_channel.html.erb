@@ -48,6 +48,8 @@
   	<%= render channel.posts.order("created_at DESC") %>
 </section>
 
+<div style="clear: both; height: 0; overflow: hidden;"> </div>
+
 <section id="create-new-post-form">
 <% if user_signed_in? && @postable %>
   <%= render 'posts/form' %>

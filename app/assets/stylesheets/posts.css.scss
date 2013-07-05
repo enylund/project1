@@ -4,5 +4,41 @@
 
 
 #post-body {
-  margin: 50px auto;
+  float:left;
+  width:49%;
+  height: 370px;
+  margin: 0px auto;
+  text-align:center;
+}
+
+#post-image {
+  height: 70%;
+}
+
+#post-image img {
+  max-height: 100%;
+}
+
+
+#post-caption {
+  font-family: 'nobel-boldbold';
+  font-size:15px;
+  text-transform:uppercase;
+  letter-spacing: 1px;
+
+  margin-top:10px;
+}
+
+#post-caption a:link {text-decoration:none; color:#7b7b7b;}
+#post-caption a:visited {text-decoration:none; color:#7b7b7b;}
+#post-caption a:hover {text-decoration:none; color:#7b7b7b;}
+#post-caption a:active {text-decoration:none; color:#7b7b7b;}
+
+
+#poster {
+
+}
+
+#post-delete-link {
+
 }

@@ -25,5 +25,28 @@ $(document).ready( function() {
       $("#application-search-nav").slideToggle("fast");
    });
 
+  $('#jump-symbol').hide();
+
+  $(window).scroll(function () {
+
+    var userInfo = $(window).height();
+
+
+    var posit = $(window).scrollTop();
+    console.log(posit);
+
+    if (posit > userInfo) {
+      $('#jump-symbol').fadeIn();
+    } else {
+      $('#jump-symbol').fadeOut();
+    }
+  });
+
+  $('#jump-symbol').on('click', function() {
+    $("body").animate({scrollTop:0}, "slow");
+  });
+
+
+
 
 });

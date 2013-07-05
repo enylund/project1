@@ -1,16 +1,12 @@
 <section id="post-body">
-  <div class="post-imgurl">
-    <%= post.img_url %>
+  <div id="post-image">
+    <%= image_tag post.postimage.url %>
   </div>
-  <%= image_tag post.postimage.url %>
-  <div class="post-caption">
+  <div id="post-caption">
     <%= link_to post.caption, post %>
   </div>
-  <div class="poster">
-    POSTER IS: <%= link_to post.user.username, post.user %>
-  </div>
     <% if user_signed_in? && current_user == post.user %>
-  <div class="post-delete-link">
+  <div id="post-delete-link">
     <%= link_to("Delete", post, :method => 'delete') %>
   </div>
   <%end%>

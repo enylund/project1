@@ -7,7 +7,7 @@
   font-size: 40px;
   color:black;
 
-  width: 90%;
+  width: 88.5%;
   text-align: center;
   display: block;
   margin-left: auto;
@@ -61,6 +61,7 @@
   height:auto;
   overflow:hidden;
   text-align:center;
+  display:none;
   p {
       font-size: 18px;
       font-family: 'nobel-boldbold';
@@ -86,9 +87,14 @@
   letter-spacing: 1px;
 }
 
+#all-channel-posts {
+  width:87%;
+  margin:50px auto;
+  overflow: hidden;
+}
 
-
-
+#create-new-post-form {
+}
 
 
 

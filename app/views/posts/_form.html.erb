@@ -1,12 +1,7 @@
 <div class="new-post">
-  MAKE NEW POST:
+  New Post:
   <% @post = Post.new %>
   <%= form_for(@post, :url => posts_path, :html => { :multipart => true }) do |f| %>
-
-    <div class="field">
-      <%= f.label :img_url %><br>
-      <%= f.text_field :img_url %>
-    </div>
     <div class="field">
       <%= f.label :caption %><br>
       <%= f.text_field :caption %>

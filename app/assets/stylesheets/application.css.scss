@@ -217,7 +217,14 @@ input[type=text] {
    color: black;
 }
 
-
+#jump-symbol {
+  position:fixed;
+  bottom: 30px;
+  left: 20px;
+  font-size: 40px;
+  cursor:pointer;
+  z-index:500;
+}
 
 
 
