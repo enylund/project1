@@ -11,15 +11,14 @@
     <%end%>
     <%=channel.name%><span id="expand-symbol">&#11031;</span> </div>
 
-
-<% if user_signed_in? %>
-  <% if current_user == @channel.user %>
-    <div id="destroy-button"><%= render 'destroychannel' %></div>
-    <%= render 'collab' %>
-  <% end %>
-<% end %>
-
 <section id="channel-info-hide">
+  <% if user_signed_in? %>
+    <% if current_user == @channel.user %>
+      <div id="destroy-button"><%= render 'destroychannel' %></div>
+      <%= render 'collab' %>
+    <% end %>
+  <% end %>
+
   <div id="channel-info-column-1">
      <% if @add_followers_to_view %>
         <span class="channel-info-headline">Followers</span>
