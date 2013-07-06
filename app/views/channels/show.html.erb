@@ -1,8 +1,5 @@
 <%= render @channel %>
 <% if user_signed_in? %>
 
-  <% if current_user == @channel.user %>
-    <%= render 'destroychannel' %>
-  <% end %>
 
 <% end %>
