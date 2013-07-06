@@ -1,17 +1,13 @@
-<div class="new-post">
-  New Post:
   <% @post = Post.new %>
   <%= form_for(@post, :url => posts_path, :html => { :multipart => true }) do |f| %>
-    <div class="field">
-      <%= f.label :caption %><br>
-      <%= f.text_field :caption %>
+    <div id="add-image-caption">
+      <%= f.text_field :caption, placeholder: "Caption" %>
     </div>
-    <div class="field">
+    <div id="add-image-upload">
       <%= f.file_field :postimage %>
     </div>
     <%= f.hidden_field :channel_id, value: @channel.id %>
-    <div class="actions">
+    <div id="add-image-submit">
       <%= f.submit %>
     </div>
   <% end %>
-</div>

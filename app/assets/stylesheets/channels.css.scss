@@ -115,7 +115,17 @@
 }
 
 #create-new-post-form {
-}
+  position: fixed;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  border-top:solid black 2px;
+  opacity:0.7;
+  font-family: 'nobel-boldbold';
 
+  height:60px;
+  background-color:white;
+  color:black;
+}
 
 

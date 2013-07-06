@@ -34,11 +34,36 @@
 #post-caption a:hover {text-decoration:none; color:#7b7b7b;}
 #post-caption a:active {text-decoration:none; color:#7b7b7b;}
 
-
-#poster {
-
+#new_post {
+  margin:10px auto 0px auto;
+  text-align:center;
 }
 
-#post-delete-link {
+#new_post ::-webkit-input-placeholder {
+  color: black;
+}
 
+#new_post :-moz-placeholder { /* Firefox 18- */
+  color: black;
+}
+
+#new_post ::-moz-placeholder {  /* Firefox 19+ */
+    color: black;
+  }
+
+#new_post :-ms-input-placeholder {
+  color: black;
+}
+
+#add-image-caption {
+display:inline-block;
+margin: 0px auto;
+}
+
+#add-image-upload {
+display:inline-block;
+}
+
+#add-image-submit {
+display:inline-block;
 }
