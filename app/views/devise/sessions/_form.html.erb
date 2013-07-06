@@ -1,15 +1,14 @@
-<h3>Sign in</h3>
-
 <%= form_for(User.new, :as => :user, :url => session_path(:user)) do |f| %>
-  <div><%= f.label :Username_or_email %><br />
-  <%= f.text_field :login, :autofocus => true %></div>
+  <div>
+  <%= f.text_field :login, :autofocus => true, placeholder: "username", class: "new_user_inputs" %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <div>
+  <%= f.password_field :password, placeholder: "password", class: "new_user_inputs" %></div>
 
-  <% if Devise.mappings[:user].rememberable? -%>
+<!--
+<% if Devise.mappings[:user].rememberable? -%>
     <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
+<% end %>
+-->
   <div><%= f.submit "Sign in" %></div>
 <% end %>

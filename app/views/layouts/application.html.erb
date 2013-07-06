@@ -20,8 +20,8 @@
        <li><%= link_to "Me", current_user, :class => "nav-user"%></li>
        <li class="border-maker"><%= link_to "Logout", destroy_user_session_path , :class => "nav-user"%></li>
   	 <% else %>
-       <%= link_to "Sign in", new_user_session_path %> or 
-  	    <%= link_to "sign up", new_user_registration_path %>
+        <!--<%= link_to "Sign in", new_user_session_path %>-->
+        <!--<div id="sign_up_link"><%= link_to "sign up", new_user_registration_path %></div>-->
         <div><%= render 'devise/sessions/form' %></div>
   	 <% end %>
      <% flash.each do |name, msg| %>		
