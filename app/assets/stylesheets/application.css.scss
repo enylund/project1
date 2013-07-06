@@ -40,7 +40,7 @@ a.nav-user:active {color:white;}  /* selected link */
   letter-spacing: 1px;
   color:white;
   text-align:center;
-  margin-top:15px;
+  margin-top:22px;
   width:110px;
 
   display: block;
@@ -91,14 +91,14 @@ ul#application-nav-list-left {
   left:0px;
   right:0px;
 
-  height:50px;
+  height:60px;
   background-color:black;
   color:white;
 }
 
 #application-search-nav{
   position: fixed;
-  top:50px;
+  top:60px;
   left:0px;
   right:0px;
 
@@ -148,7 +148,7 @@ ul#add-channel-list-left {
 }
 
 
-input[type=text] {
+#application-search-nav input[type=text] {
    border: 2px solid black;
    padding: 10px;
    background: #fcee21;
@@ -201,19 +201,19 @@ input[type=text] {
   color:#fcee21;
 }
 
-::-webkit-input-placeholder {
+#application-search-nav ::-webkit-input-placeholder {
   color: black;
 }
 
-:-moz-placeholder { /* Firefox 18- */
+#application-search-nav :-moz-placeholder { /* Firefox 18- */
   color: black;
 }
 
-::-moz-placeholder {  /* Firefox 19+ */
+#application-search-nav ::-moz-placeholder {  /* Firefox 19+ */
    color: black;
 }
 
-:-ms-input-placeholder {  
+#application-search-nav :-ms-input-placeholder {  
    color: black;
 }
 

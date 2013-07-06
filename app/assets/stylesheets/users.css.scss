@@ -26,6 +26,42 @@ ul.ui-autocomplete {
         }
 }
 
+#user-search-form {
+  display:inline-block;
+}
+
+#user-search-form input[type=text] {
+   border-bottom: 1px solid white;
+   border-top: 2px solid black;
+   border-left: 2px solid black;
+   border-right: 2px solid black;
+   padding: 3px;
+   background: black;
+   font-family: 'nobel-boldbold';
+   color:white;
+   font-size: 13px;
+   width:90px;
+}
+
+#user-search-form input[type=submit] {
+  visibility:hidden;
+}
+
+#user-search-form ::-webkit-input-placeholder {
+  color: white;
+}
+
+#user-search-form :-moz-placeholder {
+  color: white;
+}
+
+#user-search-form ::-moz-placeholder {
+  color: white;
+}
+
+#user-search-form :-ms-input-placeholder {
+  color: white;
+}
 
 #whose-page {
   width:87%;

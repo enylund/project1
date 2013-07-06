@@ -9,8 +9,8 @@
 <body>
 <nav id="application-nav">
   <ul id="application-nav-list-left">
-    <li id="application-search-nav-button"><span class="underline-hover">Search</span></li>
-    <li id="application-channel-add" class='border-maker'><span class="underline-hover">Add Channel</span></li>
+    <li id="application-channel-add"><span class="underline-hover">New Topic</span></li>
+    <li id="application-search-nav-button" class="border-maker"><%= render 'users/usersearch' %></li>
   </ul>
   <div id="application-nav-logotype">
     BIBLIOGRAPHY
@@ -32,8 +32,6 @@
 <section id="application-search-nav">
    <%= render "channels/form" %>
 </section>
-
-   <%= render "users/usersearch" %>
 
    <%= yield %>
 <div id="jump-symbol">&#9650;</div>
