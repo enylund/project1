@@ -24,6 +24,8 @@ var ready = (function () {
       $("#application-search-nav").slideToggle("fast");
    });
 
+   $("#flash_notice").delay(2000).fadeOut();
+
   $('#jump-symbol').hide();
 
   $(window).scroll(function () {

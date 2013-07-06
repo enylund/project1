@@ -15,6 +15,7 @@
   <div id="application-nav-logotype">
     BIBLIOGRAPHY
   </div>
+
   <ul id="application-nav-list-right">
   	 <% if user_signed_in? %>
        <li><%= link_to "Me", current_user, :class => "nav-user"%></li>
@@ -22,18 +23,26 @@
   	 <% else %>
         <!--<%= link_to "Sign in", new_user_session_path %>-->
         <!--<div id="sign_up_link"><%= link_to "sign up", new_user_registration_path %></div>-->
-        <div><%= render 'devise/sessions/form' %></div>
+        <div>
+            <%= render 'devise/sessions/form' %>
+        </div>
   	 <% end %>
-     <% flash.each do |name, msg| %>		
-	      <%= content_tag :div, msg, :id => "flash_#{name}"%>
-     <% end %>
   </ul>
+
 </nav>
+
+ <% flash.each do |name, msg| %>		
+   <div id="flash_notice">
+     <%= content_tag :div, msg, :id => "flash_#{name}"%>
+   </div>
+<% end %>
+
 <section id="application-search-nav">
    <%= render "channels/form" %>
 </section>
 
-   <%= yield %>
+<%= yield %>
+
 <div id="jump-symbol">&#9650;</div>
 </body>
 </html>
