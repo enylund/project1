@@ -62,3 +62,87 @@ display:inline-block;
   background:white;
   color:black;
 }
+
+
+#main-login {
+  background:white;
+  padding:40px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  margin-left: -168px;
+  margin-top: -183px;
+  text-align:center;
+}
+
+#main-login div{
+  display:block;
+  font-family:'nobel-boldbold';
+  margin-bottom:10px;
+  
+}
+
+
+#main-login input[type=text] {
+    border: 3px solid black;
+    padding: 15px;
+    background: white;
+    font-family: 'nobel-boldbold';
+    color:black;
+    font-size: 15px;
+    width:200px;
+    height:30px;
+    display:block;
+}
+
+#main-login input[type=password] {
+    border: 3px solid black;
+    padding: 15px;
+    background: white;
+    font-family: 'nobel-boldbold';
+    color:black;
+    font-size: 15px;
+    width:200px;
+    height:30px;
+    display:block;
+}
+
+#main-login ::-webkit-input-placeholder {
+  color: black;
+}
+
+#main-login :-moz-placeholder {
+  color: black;
+}
+
+#main-login ::-moz-placeholder {
+ color: black;
+}
+
+#main-login :-ms-input-placeholder {
+  color: black;
+}
+
+#main-login input[type=submit] {
+  font-family: 'nobel-boldbold';
+  width:150px;
+  height: 50px;
+  background-color:white;
+  border: 3px solid black;
+  color:black;
+  text-decoration:none;
+  font-size:12px;
+}
+
+#main-login input[type=submit]:hover {
+  background:black;
+  color:white;
+}
+
+
+
+
+
+
+
+
