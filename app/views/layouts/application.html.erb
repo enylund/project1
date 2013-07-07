@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<% unless @hidenav == true %>
 <nav id="application-nav">
   <ul id="application-nav-list-left">
     <li id="application-channel-add"><span class="underline-hover">New Topic</span></li>
@@ -30,6 +31,7 @@
   </ul>
 
 </nav>
+<% end %>
 
  <% flash.each do |name, msg| %>		
    <div id="flash_notice">
