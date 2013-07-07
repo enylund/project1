@@ -1,6 +1,6 @@
-<div class="delete-channel">
+<div id="delete-channel">
 
-  <%= form_for(@channel, :html => {:method => 'delete'}) do |f| %>
+  <%= form_for(@channel, :html => {:method => 'delete'}, :data => {confirm: "Are you sure"}) do |f| %>
     <%= f.submit "Delete Channel"%>
   <% end %>
 
