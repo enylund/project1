@@ -37,22 +37,51 @@
 #new_post {
   margin:10px auto 0px auto;
   text-align:center;
+  font-family: 'nobel-boldbold';
 }
 
+#new_post input[type=text] { 
+  font-family: 'nobel-boldbold';
+  font-size: 13px;
+  color:white;
+  background:black;
+  padding:5px;
+  border: solid white 1px;
+}
+
+#new_post input[type=submit], input[type=file] {
+  font-family: 'nobel-boldbold';
+  padding:5px 10px;
+  background-color:black;
+  border: 1px solid white;
+  color:white;
+  text-decoration:none;
+}
+
+#new_post input[type=submit]:hover {
+  background:white;
+  color:black;
+}
+
+#new_post div {
+  margin: 0px 20px;
+}
+
+
 #new_post ::-webkit-input-placeholder {
-  color: black;
+  color: white;
 }
 
 #new_post :-moz-placeholder { /* Firefox 18- */
-  color: black;
+  color: white;
 }
 
 #new_post ::-moz-placeholder {  /* Firefox 19+ */
-    color: black;
+    color: white;
   }
 
 #new_post :-ms-input-placeholder {
-  color: black;
+  color: white;
 }
 
 #add-image-caption {
@@ -66,4 +95,24 @@ display:inline-block;
 
 #add-image-submit {
 display:inline-block;
+}
+
+#new-post-symbol {
+position:fixed;
+bottom: 55px;
+right: 20px;
+font-size: 40px;
+cursor:pointer;
+z-index:500;
+
+width: 50px;
+height: 50px;
+text-align:center;
+line-height:48px;
+border-radius: 25px;
+transition: all 1s ease-out;
+}
+
+#new-post-symbol:hover {
+  background:#fcee21;
 }

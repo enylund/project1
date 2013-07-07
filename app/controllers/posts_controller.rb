@@ -31,7 +31,7 @@ class PostsController < ApplicationController
       @post = Post.create(post_params)
       @post.user = current_user
       @post.save
-      redirect_to @post.channel
+      redirect_to @post.channel, notice: "Image successfully added"
     else
       redirect_to :root, notice: "Stop it yo"
     end
