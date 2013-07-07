@@ -1,21 +1,19 @@
-<h2>Sign up</h2>
+<div id="main-login-logo">Sign up</div>
+<% @hidenav = true %>
 
+<div id="main-login">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+  <div><%= f.text_field :username, :autofocus => true, :placeholder => "Username" %></div>
 
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username, :autofocus => true %></div>
+  <div><%= f.email_field :email, :placeholder => "Email" %></div>
 
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <div><%= f.password_field :password, :placeholder => "Password" %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
+  <div><%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></div>
 
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
