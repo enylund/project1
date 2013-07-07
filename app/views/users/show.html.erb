@@ -3,7 +3,7 @@
   <!-- <h2>Activity on <%= who2 %>  :</h2> -->
   <% @channels_to_show.each do |channel| %>
         <div class="set-of-six">
-        <div class="individual-text">
+        <div class="individual-text yellow-hover">
           <div class="text-vert-center">
             <%= link_to channel.name, channel_path(channel) %>
           </div>
@@ -21,7 +21,7 @@
   <!-- <h2>Activity on channels <%= who3 %>:</h2> -->
     <% @array_of_channels_a_user_follows.each do |channel| %>
       <div class="set-of-six">
-        <div class="individual-text">
+        <div class="individual-text yellow-hover">
           <div class="text-vert-center">
             <%= link_to channel.name, channel_path(channel) %>
           </div>

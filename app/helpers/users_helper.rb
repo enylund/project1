@@ -7,7 +7,7 @@ module UsersHelper
   	if you_check
   	  "You"
   	else
-      "#{@user.username}'s"
+      "#{@user.username}"
     end
   end
 
