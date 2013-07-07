@@ -6,30 +6,35 @@
         <% elsif @allowed_to_follow == true && @test.blank? == false %>
           <%= render 'follow_channels/unfollow' %>
         <% else %>
-          <div id="you-created-message">(your bibliography)</div>
+          <!-- <div id="you-created-message">(your bibliography)</div>-->
         <% end %>
     <%end%>
     <%=channel.name%><span id="expand-symbol">&#11031;</span> </div>
 
 <section id="channel-info-hide">
-  <% if user_signed_in? %>
-    <% if current_user == @channel.user %>
-      <div id="destroy-button"><%= render 'destroychannel' %></div>
-      <%= render 'collab' %>
-    <% end %>
-  <% end %>
 
   <div id="channel-info-column-1">
      <% if @add_followers_to_view %>
         <span class="channel-info-headline">Followers</span>
         <% @chan_fols.each do |row| %>
-          <p><%= link_to row.user.username, user_path(row.user) %></p>
+          <span class="individual-follower yellow-hover"><%= link_to row.user.username, user_path(row.user) %></span>
          <% end %>
        <% end %>
      <div class="channel-privacy">
        <span class="channel-info-headline">Status</span>
        <p><%= channel.privacy %></p>
      </div>
+     <% if user_signed_in? && current_user == @channel.user %>
+        <div>
+          <span class="channel-info-headline">Collaborators</span>
+          <% @collaborators.each do |collab| %>
+            <span class="individual-follower yellow-hover">
+              <%= collab.user.username %>
+              (<%= link_to 'delete', collab, method: :delete, data: { confirm: 'Are you sure?' } %>)
+            </span>
+          <% end %>
+        </div>
+     <%end%>
   </div>
   <div id="channel-info-column-2">
      <div class="channel-description">
@@ -38,8 +43,16 @@
      </div>
      <div class="channel-author">
        <span class="channel-info-headline">Researched by</span>
-       <p><%= link_to channel.user.username, channel.user %></p>
+       <span class="individual-follower yellow-hover"><%= link_to channel.user.username, channel.user %></span>
      </div>
+     
+     <% if user_signed_in? %>
+     <% if current_user == @channel.user %>
+       <%= render 'collab' %>
+       <%= render 'destroychannel' %>
+     <% end %>
+  <% end %>
+
   </div>
 </section>
 
