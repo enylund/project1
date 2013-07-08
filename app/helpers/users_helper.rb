@@ -5,7 +5,6 @@ module UsersHelper
 
   def who1
   	if you_check
-  	  "You"
   	else
       "#{@user.username}"
     end

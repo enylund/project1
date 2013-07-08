@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 ready = ->
-  $('#channel_user_tokens').tokenInput '/users/index.json',
+  $('#channel_user_tokens').tokenInput '/users/token_index',
     theme: 'facebook',
     propertyToSearch: "username",
     prePopulate: $('#channel_user_tokens').data('load'),

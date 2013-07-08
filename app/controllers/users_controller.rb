@@ -9,6 +9,12 @@ class UsersController < ApplicationController
       #format.json { render :json => @users }
     #end
   end
+  
+  def token_index
+    @users = User.order(:username).where("username like ?", "%#{params[:term]}%")
+    @users = User.where("username like ?", "%#{params[:q]}%")
+    render :json => @users
+  end
 
   def show
     @user = User.find_by_username(params[:username])

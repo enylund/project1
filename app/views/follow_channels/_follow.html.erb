@@ -1,5 +1,5 @@
 <% @follow_channel = FollowChannel.new %>
-<%= form_for @follow_channel, :url => follow_channels_create_path, :html => { :method => "post" } do |f| %>
+<%= form_for @follow_channel, :remote => true,  :url => follow_channels_create_path, :html => { :method => "post" } do |f| %>
   <%= f.hidden_field :user_id, :value => current_user.id %>
   <%= f.hidden_field :channel_id, :value => @channel.id.to_i %>
   <%= f.submit "+", :id => "follower-submit-button" %>
