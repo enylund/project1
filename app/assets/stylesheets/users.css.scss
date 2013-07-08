@@ -7,8 +7,8 @@ ul.ui-autocomplete {
   list-style: none;
   margin: 0;
   padding: 0;
-  border: solid 1px #999;
   cursor: default;
+  font-family: 'nobel-boldbold';
 
   li {
     background-color: #FFF;
@@ -16,12 +16,13 @@ ul.ui-autocomplete {
     margin: 0;
     padding: 0;
     a {
-      color: #000;
+      color: black;
       display: block;
       padding: 3px;
       }
       a.ui-state-hover, a.ui-state-active {
       background-color: #FFFCB2;
+      color:white;
       }
         }
 }
@@ -118,13 +119,3 @@ ul.ui-autocomplete {
 .text-vert-center a:visited {text-decoration:none; color:black;}
 .text-vert-center a:hover { text-decoration:none; color:black;}
 .text-vert-center a:active {text-decoration:none; color:black;}
-
-
-
-
-
-
-
-
-
-

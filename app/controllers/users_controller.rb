@@ -1,22 +1,29 @@
 class UsersController < ApplicationController
 
   def index
-    # @users = User.order(:username).where("username like ?", "%#{params[:term]}%")
-    # render json: @users.map(&:username)
-    @users = User.where("username like ?", "%#{params[:q]}%")
-    respond_to do |format|
-      format.html
-      format.json { render :json => @users }
-    end
+     @users = User.order(:username).where("username like ?", "%#{params[:term]}%")
+     render json: @users.map(&:username)
+    #@users = User.where("username like ?", "%#{params[:q]}%")
+    #respond_to do |format|
+     # format.html
+      #format.json { render :json => @users }
+    #end
   end
 
   def show
     @user = User.find_by_username(params[:username])
     # @user = User.where(username: params[:username]).take
-    @title = @user.username + "'s biblio"
+    @title = @user.username
     private_channel_show_check()
     create_array_of_followed_channels_to_show()
+  end
 
+  def home
+    if user_signed_in?
+      redirect_to user_path(current_user.username)
+    else
+      redirect_to new_user_session_path
+    end
   end
 
   def private_channel_show_check

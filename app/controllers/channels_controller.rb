@@ -10,7 +10,7 @@ class ChannelsController < ApplicationController
   # GET /channels/1
   # GET /channels/1.json
   def show
-  @title = @channel.user.username + "'s " + @channel.name + " channel"
+  @title = @channel.name
   # followers_count =  FollowChannel.count(:conditions => { :channel_id => params[:id] })
   followers_count =  FollowChannel.where(channel_id: params[:id]).count
   @collaborators = @channel.collaborations
