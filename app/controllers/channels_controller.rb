@@ -91,10 +91,10 @@ class ChannelsController < ApplicationController
       privacy = @channel.privacy
       @postable = true
 
-      if Collaboration.where(channel: @channel, user: current_user).blank?
-        a_collab = false
-      else
+      if current_user && Collaboration.where(channel: @channel, user: current_user).present?
         a_collab = true
+      else
+        a_collab = false
       end
 
       if !@channel.visible_to?(current_user) && !a_collab
