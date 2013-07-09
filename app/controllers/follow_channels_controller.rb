@@ -3,6 +3,7 @@ class FollowChannelsController < ApplicationController
   def create
     FollowChannel.create(follow_params)
     @channel = Channel.find(params[:follow_channel][:channel_id])
+    # raise @channel.name.to_yaml
     # redirect_to :back
     respond_to do |format|
       format.js
