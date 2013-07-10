@@ -2,7 +2,7 @@
 
   <!-- <h2>Activity on <%= who2 %>  :</h2> -->
   <% @channels_to_show.each do |channel| %>
-        <div class="set-of-six">
+    <div class="set-of-six" id="<%= channel.id.to_i %>">
         <div class="individual-text yellow-hover">
           <div class="text-vert-center">
             <%= link_to channel.name, channel_path(channel) %>
@@ -13,6 +13,9 @@
               <%= image_tag post.postimage.url %>
           </div>
         <% end %>
+        <div class="add-images-here"></div>
+        <div class="add-link-here"></div>
+        <%= link_to "add 6", addition_channel_path(channel.id, channel_count: 5), remote: true, :class => "add_posts" %>
         <div style="clear: both;"></div>
     </div>
     <% end %>

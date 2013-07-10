@@ -1,0 +1,7 @@
+var output = "<%= j(link_to 'add 6', addition_channel_path(@channel.to_i, :channel_count => @new_count), remote: true, :class => 'add_posts') %>";
+console.log(output);
+
+$("#<%= @channel.to_i %>").find('.add-images-here').before("<%= j(render 'addition') %>");
+$('.individual-image').filter(function() { return $(this).css("display") == "none" }).fadeIn('slow');
+$("#<%= @channel.to_i %>").find('.add_posts').remove();
+$("#<%= @channel.to_i %>").find('.add-link-here').after(output);
