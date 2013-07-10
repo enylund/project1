@@ -48,6 +48,12 @@ BiblioApp::Application.routes.draw do
   #       get 'sold'
   #     end
   #   end
+  #
+resources :channels do
+  member do
+    get 'addition'
+  end
+end
 
   # Example resource route with sub-resources:
   #   resources :products do

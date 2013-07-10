@@ -27,6 +27,18 @@ class ChannelsController < ApplicationController
     end
   end
 
+  def addition
+    count = params[:channel_count]
+    @new_count = count.to_i + 6
+    @channel = params[:id]
+
+    @output = Post.where('channel_id = ?', @channel).order('created_at DESC').limit(6).offset(count).all
+    # raise count.to_yaml
+    respond_to do |format|
+      format.js {}
+    end
+  end
+
   # GET /channels/new
   def new
     @channel = Channel.new

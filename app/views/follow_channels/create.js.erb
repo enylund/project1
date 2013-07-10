@@ -1,5 +1,9 @@
   $('#channel-name').find('#new_follow_channel').remove();
   $('#channel-name').prepend("<%= escape_javascript(render 'unfollow') %>");
 
-  var fakeFlash = "<div id='flash_notice'>Following</div>";
-  $('body').append(fakeFlash).find('#flash_notice').delay(1000).fadeOut(300, function() { $(this).remove(); });
+  var fakeFlash = "<div id='flash_notice'> You are now following: <%= j(@channel.name) %> </div>";
+  $('body').append(fakeFlash).find('#flash_notice').delay(1000).fadeOut(300, function() { 
+	
+	$(this).remove(); 
+	
+	});

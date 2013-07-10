@@ -1,7 +1,7 @@
 $('#channel-name').find('#new_follow_channel').remove();
 $('#channel-name').prepend("<%= escape_javascript(render 'follow') %>");
 
-var fakeFlash = "<div id='flash_notice'>No longer following</div>";
+var fakeFlash = "<div id='flash_notice'>No longer following: <%= j @channel.name %> </div>";
 
 $('body').append(fakeFlash);
 
