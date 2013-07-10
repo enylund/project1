@@ -1,5 +1,18 @@
 <% if !@privacy %>
-  <%= render @post %>
+  
+<section id="post-body">
+  <div id="post-image">
+    <%= image_tag @post.postimage.url %>
+  </div>
+  <div id="post-caption">
+    <%= link_to @post.caption, @post %>
+  </div>
+    <% if user_signed_in? && current_user == @post.user %>
+  <div id="post-delete-link">
+    <%= link_to("Delete", @post, :method => 'delete') %>
+  </div>
+  <%end%>
+</section>
 
   <% if user_signed_in? %>
     <%= render 'comments/form' %>

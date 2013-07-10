@@ -1,5 +1,20 @@
 <div id="whose-page"><div><%= who1 %></div></div>
 
+<div class="set-of-six">
+  <div class="individual-text yellow-hover">
+    <div class="text-vert-center">
+      POSTS IN ORDER
+    </div>
+  </div>
+      <% @posts_in_order.each do |post| %>
+        <div class="individual-image">
+          <% pic_link = image_tag post.postimage.url %>
+          <%= link_to pic_link, post %>
+        </div>
+      <% end %>
+      <div style="clear: both;"></div>
+</div>
+
   <!-- <h2>Activity on <%= who2 %>  :</h2> -->
   <% @channels_to_show.each do |channel| %>
         <div class="set-of-six">
@@ -10,7 +25,8 @@
         </div>
         <% channel.posts.last(5).reverse.each do |post| %>
           <div class="individual-image">
-              <%= image_tag post.postimage.url %>
+              <% pic_link = image_tag post.postimage.url %>
+              <%= link_to pic_link, post %>
           </div>
         <% end %>
         <div style="clear: both;"></div>
@@ -26,11 +42,12 @@
             <%= link_to channel.name, channel_path(channel) %>
           </div>
         </div>
-       <% channel.posts.last(5).reverse.each do |post| %>
-         <div class="individual-image">
-           <%= image_tag post.postimage.url %>
-         </div>
-     <% end %>
-     <div style="clear: both;"></div>
+        <% channel.posts.last(5).reverse.each do |post| %>
+          <div class="individual-image">
+            <% pic_link = image_tag post.postimage.url %>
+            <%= link_to pic_link, post %>
+          </div>
+        <% end %>
+        <div style="clear: both;"></div>
       </div>
     <% end %>

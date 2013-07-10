@@ -22,6 +22,7 @@ class UsersController < ApplicationController
     @title = @user.username
     private_channel_show_check()
     create_array_of_followed_channels_to_show()
+    all_the_posts()
   end
 
   def home
@@ -48,6 +49,32 @@ class UsersController < ApplicationController
       the_channels << row[:channel_id]
     end
     @array_of_channels_a_user_follows = Channel.find(the_channels)
+  end
+
+  def all_the_posts
+    associated_channels = []
+
+    followed_chans = FollowChannel.where(user_id: @user.id)
+
+    follow_chan_ids = []
+    followed_chans.each do |follow|
+      associated_channels << follow.channel_id
+    end
+
+    @user.channels.each do |chan|
+      associated_channels << chan.id
+    end
+
+    all_posts = []
+
+    associated_channels.each do |chan_id|
+      Post.where(channel_id: chan_id).each do |every_post|
+        all_posts << Post.where(id: every_post.id).take
+      end
+    end
+
+    @posts_in_order = all_posts.sort_by {|x| x.created_at}.reverse
+    # raise @posts_in_order.to_yaml
   end
 
   def search
